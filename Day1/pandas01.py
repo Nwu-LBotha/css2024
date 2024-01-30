@@ -9,6 +9,10 @@ Created on Mon Jan 29 09:54:23 2024
 import pandas as pd
 
 #file = pandas.read_csv("country_data.csv")
+# Or using github instead
+# url = https://github.com/Nwu-LBotha/css2024/blob/main/Day1/country_data.csv
+#file = pandas.read_csv(url)
+
 #file = pandas.read_csv("iris.csv")
 #file = pandas.read_csv("housing_data.csv")
 
