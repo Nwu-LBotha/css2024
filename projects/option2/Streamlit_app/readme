@@ -5,28 +5,33 @@ Created on Fri Feb  2 22:42:14 2024
 @author: Louise
 """
 
+##### The following code is a data repository for 1 paper that has been published. The data for the second paper must be added at a later stage.
+##### The app consists of a sidebar that functions as a means to move around the app.
+##### The about me section consists of things about the creator
+##### The publication highlights the abstract, graphical abstract and url to the papers
+##### The sections on the data links to the data used in the publications. THe data is not completed for one paper and as such an apology image pops up.
+
 import streamlit as st
 import pandas as pd
 from streamlit_option_menu import option_menu
 from PIL import Image
 import matplotlib.pyplot as plt
 
+#Code added due to error that arises with plotting in streamlit
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # The side bar menu code. 
 #1. Make a sidebar with a name such as contents.
-
-#st.sidebar.header("Contents") # Nag not needed
-
 #3. Lets give topics for the app which will be handy for navigation.
 #4. I want stuff to happen when selecting the options in the side bar.
-
 
 with st.sidebar:
     selected = option_menu(menu_title="Contents", options=["About Me","Publications","Data: Pt/Pd bulks","Data: Pt/Ni & Pt/Co"])
 
 
-########################################ABOUT ME
+######################################## ABOUT ME Section
+
+## This is what happens when you click on the about me section. The data changes in the main part which has some columns
 
 if selected == "About Me": 
     st.header("Dr Louise Botha")
@@ -35,7 +40,8 @@ if selected == "About Me":
     col1, col2 = st.columns(2)
 
 
-#Column 1 Stuff
+#######Column 1 Stuff
+###### Gives pic of me, email, contents and sepperates with an divider
 
     louise = Image.open('lm_botha.png')
     # st.image(img)
@@ -44,7 +50,7 @@ if selected == "About Me":
     col1.caption("email: louise.botha@nwu.ac.za") #Nah, will see 
 
 
-#Column 2 Stuff
+#######Column 2 Stuff (Same as above)
 
     #col2.header("ORCID ID")
     #col2.write("0000-0002-1249-2706")  
@@ -72,18 +78,19 @@ if selected == "About Me":
     
               
                
- ########################################PUBLICATIONS           
+ ########################################  PUBLICATIONS           
               
-
-
 if selected == "Publications":
     st.title(f"Repository {selected}")
     st.divider()
-      
+
+### Writes header and some text
+
     st.header("Hydrogen and oxygen recombination reaction on Pt–Ni and Pt–Co based alloys using density functional theory")
     st.write("ABSTRACT:")
     st.write("Density functional theory (DFT) calculations were used to investigate the surface performance of Pt, Ni, Co, and PtxTM1-x (0 ≤ x ≤ 1) alloys, as well as reaction intermediates (O, H, OH, OH + H, H2O) on these surfaces for H2/O2 recombination. The activity of the PtxTM1-x alloys towards H2/O2 recombination reaction was probed using adsorption energies and reaction energies. The Pt3Co, Pt3Ni and PtNi3 alloys were found to be stable along the (111) miller index, with strong surface adsorption occurring on the PtNi3 (111) surface and weaker adsorption on the Pt3Co (111) surface. Enhanced reactivity was observed on the Pt3Ni and Pt3Co (111) surfaces for the (O*  +  H*  →  OH*) reaction step, while the Pt (111) surface was most suited for the (OH*  +  H*  →  H2O) reaction step. The OH* formation reaction step was inhibited on the PtNi3 (111) surface due to the strong surface absorption of the reaction intermediates. Overall, these results suggest that the Pt3Co (111) surface is a promising alternative catalyst for H2/O2 recombination compared to pristine Pt due to its performance in the O + H adsorption and OH* formation steps.") 
-    #st.write("DOI: 10.1016/j.susc.2023.122354")
+
+### Created the url links for when you click on it
     
     link_url1 = "https://doi.org/10.1016/j.susc.2023.122354"
     link_text1 = "DOI: 10.1016/j.susc.2023.122354"
@@ -93,7 +100,8 @@ if selected == "Publications":
     st.markdown(link_html1, unsafe_allow_html=True)
     artikel1 = Image.open('Recomb_graphic_abstract.jpg')
     st.image(artikel1)
-    
+
+### adds a line. Rest of code is straigt foward. Ads header and text. Links with an url and also shows an image
     st.divider()
     
     st.header("Ab Initio Study of Structural, Electronic, and Thermal Properties of Pt/Pd-Based Alloys")
@@ -108,7 +116,6 @@ if selected == "Publications":
     st.image(artikel2)
 
 
-
  ########################################Pt/Ni and Pt/Co Catalysts     
 
 if selected == "Data: Pt/Ni & Pt/Co":
@@ -117,48 +124,44 @@ if selected == "Data: Pt/Ni & Pt/Co":
 
     st.header("Hydrogen and oxygen recombination reaction on Pt–Ni and Pt–Co based alloys using density functional theory")
 
+### Since this data has not been added, I have added an 404 picture to convey to the user. 
+
     st.title("Under Construction, Sorry for the Inconvenience!")
     artikel1_data2 = Image.open('nodata.gif')
     st.image(artikel1_data2)
     
-# Fig 1 data: Relative energies of a) PtxNi1-x and b) PtxCo1-x primitive structures 
-# Fig 2 Data: Top and side view of a) Pt, b) Ni, c) Co, d) Pt3Ni, e) PtNi3, and f) Pt3Co (111) surfaces, where navy is Pt, Green is Ni and light blue is Co.
-#Table 1. Comparison of calculated lattice parameters (in Å) against DFT results and interatomic potentials.
-#Table 2. Surface energies (γ) were calculated after optimization, for each solid solution along with their work functions (φ) and d-band centers (εd).
-#Fig. 3. Partial density of states (PDOS) for the d-electrons and the d-band center of the pristine Pt (111) and PtxTM1-x (111) surfaces, plotted for the up-spin channel, where d-band center value is indicated by the thick black line which is labelled.
-#Fig. 4. Comparison of the pristine surfaces and PtxTM1-x (111) surfaces in terms of the d-band centre and the work function
-#Table 3. Calculated adsorption energies (Eads) in eV for the adsorbed O*, H*, HO* and H2O*, and co-adsorbed (O* + H*) and (HO* + H*) on the (111) metal surfaces, compared to literature values (indicated as ref).
-#Table 4. Work function (Φ), the difference in the work function from the pristine surface and adsorbed surface (Δ Φ), intermolecular distances obtained from H2O and OH adsorption onto the Pt (111), Pt3Co (111), Pt3Ni(111) and the PtNi3(111) surfaces.
-#Table 5. Calculated reaction energies (ER) and activation energies (Ea), in eV, for the recombination reaction R2 (O* + H* → HO*) and R4 (HO* + H* → H2O*) on the investigated metal surfaces.
-#Fig. 7. Calculated reaction profile for the a) OH formation and b) H2O formation reactions on the PtxTM1- x (111) surfaces, compared to the Pt (111) surface.
-
-
  ########################################Pt/Pd bulk profiles    
- 
  
  
 if selected == "Data: Pt/Pd bulks":
     st.title(f"Repository {selected}")
     st.divider()
 
+## First oicture of the paper. THis section gives an header but since there are subscript in the header, the code SUB is used to fix this. The XXX.translate(SUB)
+## Fixes the subscripts in the heading.
 
     Fig1_paper2 = "Relative energies of PtPd3, PtPd, Pt3Pd, and Pt7Pd alloy structures."
     SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
     st.header("Figure 1: " + Fig1_paper2.translate(SUB))
     
-    #Using Pandas to create my dataframe 
+###Using Pandas to create my dataframe. Imports the data from an excel file to a dataframe. I have removed the index columns. 
+##Since this is a multisheet excel, SHEET1 must be used with apporpiate name
+##PLots was made using the correct x and y axis and changing the colour and marker type
+## They were labeled
+##PLot is shown  using st.pyplot()  
     
     fig1_data = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure1',index_col=None)
 
-    # Plot using Matplotlib
+    # Plot using Matplotlib. plot is made from the pataframe. Color of plot is blue and it is a solid line.
     plt.plot(fig1_data['Percentage Pd'], fig1_data['Formation energy'], color='blue', marker='o', linestyle='solid')
     plt.xlabel("Percentage Pd (%)")
     plt.ylabel("Formation energy (eV)")
     plt.title("Figure 1")
-    st.pyplot()
-    st.caption("Table: Formation energies")
-    st.table(fig1_data)
+    st.pyplot()    #Comand to show plot
+    st.caption("Table: Formation energies")  #added a caption with the table
+    st.table(fig1_data)   #added a table
 
+# sane basics as the previous code
 
     Fig2_paper2 = "Murnaghan’s fit for the pristine (a) Pt and (b) Pd, as well as (c) PtPd3, (d) PtPd, (e) PtPd (L10), (f) Pt3Pd, and (g) Pt7Pd alloy structures (conventional unit cell structures)"
     SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
@@ -166,9 +169,12 @@ if selected == "Data: Pt/Pd bulks":
     Vol_fig = "A3"
     SUP = str.maketrans("0123456789", "⁰¹²³⁴⁵⁶⁷⁸⁹")
         
-    
+#I have added some radio buttons since this is very clunky with all of the data. So you select one and the if function shows what you selectd. 
+
+
     data_fig1 = st.radio("Please select data to see",("a) Pt","b) Pd","c) PtPd3","d) PtPd","e) Pt3Pd","f) Pt7Pd"))
     if data_fig1 == "a) Pt":
+
 ###Figure 2. Make pandas dataframe which outputs a Table and gives a plot, if able
 
     ###A Pt
@@ -244,10 +250,11 @@ if selected == "Data: Pt/Pd bulks":
         
 # ###Figure 3. Make pandas dataframe which outputs a Table and gives a plot, if able
 
-# #Figure 3. Comparison between calculated phonon band spectra and phonon DOS spectra for the pristine Pt and Pd structures.
     Fig3_paper2 = "Comparison between calculated phonon band spectra and phonon DOS spectra for the pristine Pt and Pd structures."
     SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
     st.header("Figure 3: " + Fig3_paper2.translate(SUB))
+
+## Another radio button. I have adjusted for the number of rows to read using nrows 
 
     data_fig3 = st.radio("Please select Bandstructure data to see",("Pt","Pd","PtPd3","PtPd","Pt3Pd","Pt7Pd"))
     if data_fig3 == "Pt":
@@ -258,10 +265,14 @@ if selected == "Data: Pt/Pd bulks":
         plt.title("Band structure Pt")
         st.pyplot()
 
+#Since the tables can be too much, they only appear with a button
+
         button_band_pt = st.button("Show Table")
         if button_band_pt:
             st.table(fig3_data_Ptband)
 
+##  I have adjusted for the number of rows to read using a skiprows range and nrows. The headers are not skipped. The contents between rows 3131 to 6260 is added to dataframe 
+##  Scatter plots looked better
 
     if data_fig3 == "Pd":
         fig3_data_Pdband = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure3_band',index_col=None,skiprows=range(2, 3131),nrows=6260)
@@ -275,6 +286,7 @@ if selected == "Data: Pt/Pd bulks":
         if button_band_pd:
             st.table(fig3_data_Pdband)
 
+## The sane code as above. The number of rows are different and have been adjusted for this dataframe
 
     if data_fig3 == "PtPd3":
         fig3_data_PtPd3 = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure3_band_alloys',index_col=None,nrows=4375)
@@ -288,6 +300,7 @@ if selected == "Data: Pt/Pd bulks":
         if button_band_PtPd3:
             st.table(fig3_data_PtPd3)
 
+## The sane code as above. The number of rows are different and have been adjusted for this dataframe
 
     if data_fig3 == "PtPd":
         fig3_data_PtPd = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure3_band_alloys',index_col=None,skiprows=range(2, 4376),nrows=4426)
@@ -301,6 +314,7 @@ if selected == "Data: Pt/Pd bulks":
         if button_band_PtPd:
             st.table(fig3_data_PtPd)
 
+## The sane code as above. The number of rows are different and have been adjusted for this dataframe
 
     if data_fig3 == "Pt3Pd":
         
@@ -314,7 +328,9 @@ if selected == "Data: Pt/Pd bulks":
         button_band_Pt3Pd = st.button("Show Table")
         if button_band_Pt3Pd:
             st.table(fig3_data_Pt3Pd)
-            
+
+## The sane code as above. The number of rows are different and have been adjusted for this dataframe
+
     if data_fig3 == "Pt7Pd":
         fig3_data_Pt7Pd = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure3_band_alloys',index_col=None,skiprows=range(2, 10284),nrows=17793)
         plt.scatter(fig3_data_Pt7Pd['band'], fig3_data_Pt7Pd['freq (cm-1)'],s=1, color='red', linestyle='solid')
@@ -327,7 +343,7 @@ if selected == "Data: Pt/Pd bulks":
         if button_band_Pt7Pd:
             st.table(fig3_data_Pt7Pd)
             
-#gg
+#The next figures. I have only done 1 of them since I ran out of time for the project. AS such I have added an error message for the rest.
 
     data_fig3_2 = st.radio("Please select POS data to see",("Pt","Pd","PtPd3","PtPd","Pt3Pd","Pt7Pd"))
     
@@ -343,12 +359,13 @@ if selected == "Data: Pt/Pd bulks":
         if button2_band_pt:
             st.table(fig3_2_data_Ptband)
 
+##I ran out of time for the project. AS such I have added an error message for the rest.
 
     if data_fig3_2 == "Pd":
         st.title("Sorry data not yet updated, please come back another time")
         artikel2_data2 = Image.open('nodata.gif')
         st.image(artikel2_data2)
-        
+    
 
     if data_fig3_2 == "PtPd3":
         st.title("Sorry data not yet updated, please come back another time")
