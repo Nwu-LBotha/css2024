@@ -19,7 +19,7 @@ max_rating = df['Rating'].idxmax()
 # Extract the movie name corresponding to the highest rating
 highest_rating = df.loc[max_rating, 'Title']
 #print(highest_rating)
-
+#The Dark Knight
 
 #Question2
 ##What is the average revenue of all movies in the dataset? 
@@ -30,6 +30,7 @@ highest_rating = df.loc[max_rating, 'Title']
 df.dropna(subset=["Revenue (Millions)"])
 df.reset_index(drop=True)
 #print(df["Revenue (Millions)"].mean())
+# Between 70 and 100 Million
 
 #Question 3
 ## What is the average revenue of movies from 2015 to 2017 in the dataset?
@@ -40,6 +41,7 @@ movies_2015_2017 = df[(df['Year'] == 2015) | (df['Year'] == 2017)]
 movies_2015_2017.dropna(subset=["Revenue (Millions)"])
 movies_2015_2017.reset_index(drop=True)
 #print(movies_2015_2017["Revenue (Millions)"].mean())
+#Between 50 and 80 Million
 
 #Question 4
 # No of movies released in 2016
@@ -47,6 +49,7 @@ movies_2015_2017.reset_index(drop=True)
 movies_2016 = df[(df['Year'] == 2016)]
 Nomovies_2016 = len(movies_2016)
 #print(Nomovies_2016)
+#297
 
 
 
@@ -56,20 +59,22 @@ Nomovies_2016 = len(movies_2016)
 nolan = df[df['Director'] == 'Christopher Nolan']
 count_Nolan = len(nolan)
 #print(count_Nolan)
-
+#5
 
 # Question 5
 #How many movies in the dataset have a rating of at least 8.0?
 Rating_8 = df[df['Rating'] >= 8.0]
 My_8_rating = len(Rating_8)
 #print(My_8_rating)
+#78
+
 
 #Question 7
 #What is the median rating of movies directed by Christopher Nolan?
 
 nolan_median = nolan['Rating'].median()
 #print(nolan_median)
-
+#8.6
 
 #Question 8
 #Find the year with the highest average rating?
@@ -79,6 +84,7 @@ yearly_average = df.groupby('Year')['Rating'].mean()
 
 higest_avg_rating = yearly_average.idxmax()
 #print(higest_avg_rating)
+#2007
 
 #Question 9
 #What is the percentage increase in number of movies made between 2006 and 2016
@@ -91,6 +97,7 @@ no_movies_2016 = len(movies_2016)
 
 percentage_increase = ((no_movies_2016 - no_movies_2006) / (no_movies_2006) * 100)
 #print(percentage_increase)
+#575
 
 #Question 10
 ##"""Find the most common actor in all the movies?
@@ -99,7 +106,7 @@ percentage_increase = ((no_movies_2016 - no_movies_2006) / (no_movies_2006) * 10
 
 all_the_actors = df.groupby('Actors')
 #for actors_list in df['Actors']
-
+# Dont know, Guessed Matthew McConaughey
 
 #print(all_the_actors)
 
@@ -112,6 +119,8 @@ all_the_actors = df.groupby('Actors')
 genre_splitted = df['Genre'].str.split(',', expand=True)
 num_unique_genres = len(set(genre_splitted))
 print(num_unique_genres)
+
+#15
 
 #Question 12
 ##"""Do a correlation of the numerical features, what insights can you 
