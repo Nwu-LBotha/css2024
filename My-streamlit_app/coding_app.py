@@ -90,8 +90,6 @@ if selected == "About Me":
              
                
  ########################################PUBLICATIONS           
-              
-
 
 if selected == "Publications":
     st.title(f"Repository {selected}")
@@ -121,8 +119,6 @@ if selected == "Publications":
     st.image(BB_url, caption='Graphical Abstract', use_column_width=True) 
 
 
-
-
  ########################################Pt/Ni and Pt/Co Catalysts     
 
 if selected == "Data: Pt/Ni & Pt/Co":
@@ -130,8 +126,6 @@ if selected == "Data: Pt/Ni & Pt/Co":
     st.divider()
     st.header("Hydrogen and oxygen recombination reaction on Pt–Ni and Pt–Co based alloys using density functional theory")
     st.title("Under Construction, Sorry for the Inconvenience!")
-    st.image('nodata.gif')
-    
     no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/nodata.gif?raw=true'
     st.image(hysa_url, caption='no_url', use_column_width=True)  
     
