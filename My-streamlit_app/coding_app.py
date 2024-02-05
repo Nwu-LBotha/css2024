@@ -127,7 +127,7 @@ if selected == "Data: Pt/Ni & Pt/Co":
     st.header("Hydrogen and oxygen recombination reaction on Pt–Ni and Pt–Co based alloys using density functional theory")
     st.title("Under Construction, Sorry for the Inconvenience!")
     no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/nodata.gif?raw=true'
-    st.image(hysa_url, caption='no_url', use_column_width=True)  
+    st.image(no_url, caption='no_url', use_column_width=True)  
     
 
  ########################################Pt/Pd bulk profiles    
