@@ -40,7 +40,7 @@ if selected == "About Me":
 #Column 1 Stuff
 
 
-    image_url = ''Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/lm_botha.PNG'L'
+    image_url = 'Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/lm_botha.PNG'
     louise = Image.open('image_url')
     col1.image(louise)
     #img= Image.open('media/undraw_Chat_bot_re_e2gj.png')
