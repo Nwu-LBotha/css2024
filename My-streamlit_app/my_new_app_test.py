@@ -39,17 +39,13 @@ if selected == "About Me":
 
 #Column 1 Stuff
 
-
-    #image_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/lm_botha.PNG?raw=true'
-    #louise = Image.open('image_url')
-    #col1.image(louise)
-    
-    # Replace the URL with the raw URL of your image file on GitHub
+        # Replace the URL with the raw URL of your image file on GitHub
     image_url = 'https://github.com/Nwu-LBotha/css2024/raw/main/My-streamlit_app/media/lm_botha.PNG'
 
     # Display the image using st.image
-    st.image(image_url, caption='LM Botha Image', use_column_width=True)
-    
+    with col1:
+       st.image(image_url, caption='LM Botha Image', use_column_width=True)
+
     #img= Image.open('media/undraw_Chat_bot_re_e2gj.png')
     #col1.image('lm_botha.png',caption= 'Dr LM Botha')
     #louise = Image.open('lm_botha.png')
@@ -69,46 +65,46 @@ if selected == "About Me":
 
 # #Column 2 Stuff
 
-#     col2.header("Current position?") 
-#     col2.write("Currently a Postdoctoral Research Fellow at Hydrogen South Africa. My research focuses on using Density Functional Theory (DFT) to investigate alternative metal Catalysts used in Passive Autocatalytic Recombiners (PARs).")
-#     col2.divider()    
-#     col2.header("Hydrogen South Africa?") 
-#     col2.image('https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/HYSA.PNG')
-#     col2.write("The Department of Science and Technology of South Africa developed the National Hydrogen and Fuel Cells Technologies (HFCT) Research, Development and Innovation (RDI) Strategy. The National Strategy was branded Hydrogen South Africa (HySA). The overall goal of HySA is to develop and guide innovation along the value chain of hydrogen and fuel cell technologies in South Africa. The overall vision of the HFCT RDI strategy is to bring about wealth, jobs and IPR creation through the initiation of new high-technology industries based on minerals found on South African soil, especially Platinum Group Metals (PGMs)")
+     col2.header("Current position?") 
+     col2.write("Currently a Postdoctoral Research Fellow at Hydrogen South Africa. My research focuses on using Density Functional Theory (DFT) to investigate alternative metal Catalysts used in Passive Autocatalytic Recombiners (PARs).")
+     col2.divider()    
+     col2.header("Hydrogen South Africa?") 
+     col2.image('HYSA.png')
+     col2.write("The Department of Science and Technology of South Africa developed the National Hydrogen and Fuel Cells Technologies (HFCT) Research, Development and Innovation (RDI) Strategy. The National Strategy was branded Hydrogen South Africa (HySA). The overall goal of HySA is to develop and guide innovation along the value chain of hydrogen and fuel cell technologies in South Africa. The overall vision of the HFCT RDI strategy is to bring about wealth, jobs and IPR creation through the initiation of new high-technology industries based on minerals found on South African soil, especially Platinum Group Metals (PGMs)")
   
-#     with col2:
-#         st.link_button("Go to HYSA website", "https://hysainfrastructure.com")
+     with col2:
+         st.link_button("Go to HYSA website", "https://hysainfrastructure.com")
  
 # ######################################## The PUBLICATIONS code           
               
-# if selected == "Publications":
-#     st.title(f"Repository {selected}")
-#     st.divider()
+ if selected == "Publications":
+     st.title(f"Repository {selected}")
+     st.divider()
       
-#     st.header("Hydrogen and oxygen recombination reaction on Pt–Ni and Pt–Co based alloys using density functional theory")
-#     st.write("ABSTRACT:")
-#     st.write("Density functional theory (DFT) calculations were used to investigate the surface performance of Pt, Ni, Co, and PtxTM1-x (0 ≤ x ≤ 1) alloys, as well as reaction intermediates (O, H, OH, OH + H, H2O) on these surfaces for H2/O2 recombination. The activity of the PtxTM1-x alloys towards H2/O2 recombination reaction was probed using adsorption energies and reaction energies. The Pt3Co, Pt3Ni and PtNi3 alloys were found to be stable along the (111) miller index, with strong surface adsorption occurring on the PtNi3 (111) surface and weaker adsorption on the Pt3Co (111) surface. Enhanced reactivity was observed on the Pt3Ni and Pt3Co (111) surfaces for the (O*  +  H*  →  OH*) reaction step, while the Pt (111) surface was most suited for the (OH*  +  H*  →  H2O) reaction step. The OH* formation reaction step was inhibited on the PtNi3 (111) surface due to the strong surface absorption of the reaction intermediates. Overall, these results suggest that the Pt3Co (111) surface is a promising alternative catalyst for H2/O2 recombination compared to pristine Pt due to its performance in the O + H adsorption and OH* formation steps.") 
-#     #st.write("DOI: 10.1016/j.susc.2023.122354")
-    
-#     st.link_button("Click to Go to Publication Journal", "https://doi.org/10.1016/j.susc.2023.122354")
+     st.header("Hydrogen and oxygen recombination reaction on Pt–Ni and Pt–Co based alloys using density functional theory")
+     st.write("ABSTRACT:")
+     st.write("Density functional theory (DFT) calculations were used to investigate the surface performance of Pt, Ni, Co, and PtxTM1-x (0 ≤ x ≤ 1) alloys, as well as reaction intermediates (O, H, OH, OH + H, H2O) on these surfaces for H2/O2 recombination. The activity of the PtxTM1-x alloys towards H2/O2 recombination reaction was probed using adsorption energies and reaction energies. The Pt3Co, Pt3Ni and PtNi3 alloys were found to be stable along the (111) miller index, with strong surface adsorption occurring on the PtNi3 (111) surface and weaker adsorption on the Pt3Co (111) surface. Enhanced reactivity was observed on the Pt3Ni and Pt3Co (111) surfaces for the (O*  +  H*  →  OH*) reaction step, while the Pt (111) surface was most suited for the (OH*  +  H*  →  H2O) reaction step. The OH* formation reaction step was inhibited on the PtNi3 (111) surface due to the strong surface absorption of the reaction intermediates. Overall, these results suggest that the Pt3Co (111) surface is a promising alternative catalyst for H2/O2 recombination compared to pristine Pt due to its performance in the O + H adsorption and OH* formation steps.") 
+     #st.write("DOI: 10.1016/j.susc.2023.122354")
+   
+     st.link_button("Click to Go to Publication Journal", "https://doi.org/10.1016/j.susc.2023.122354")
 
-#     # Render the link
-#     #st.image('Recomb_graphic_abstract.jpg',caption='Grapahical abstract')
-#     AA = Image.open('Recomb_graphic_abstract.jpg')
-#     st.caption("Graphical Abstract")
-#     st.image(AA)
+     # Render the link
+     #st.image('Recomb_graphic_abstract.jpg',caption='Grapahical abstract')
+     AA = Image.open('Recomb_graphic_abstract.jpg')
+     st.caption("Graphical Abstract")
+     st.image(AA)
     
-#     st.divider()
+     st.divider()
     
-#     st.header("Ab Initio Study of Structural, Electronic, and Thermal Properties of Pt/Pd-Based Alloys")
-#     st.write("ABSTRACT:")
-#     st.write("Alloys are beneficial in numerous applications since they combine the desirable properties of different metals. In this regard, Pt/Pd alloys have been investigated as a replacement for Pt, which is the standard catalyst used in various catalytic processes. However, there are still gaps in our understanding of the structural, mechanical, and thermodynamic properties of Pt/Pd alloys. This study was conducted using density functional theory (DFT) calculations to investigate the electronic, elasticity, mechanical, and thermodynamic properties of Pt/Pd alloys and compared them to pristine Pt and Pd structures. The results indicate that the considered Pt/Pd alloy structures, PtPd3, PtPd, Pt3Pd, and Pt7Pd, are energetically favourable based on their formation energies. These structures also satisfy Born’s stability criteria and are elastically stable. The phonon density of states showed that the considered Pt/Pd alloy structures are dynamically stable, with no imaginary modes present. Additionally, the Pt atom dominates at lower frequencies, while the Pd atom dominates at higher frequencies, as seen in the phonon band structure. The electronic density of states revealed that the considered Pt/Pd alloy structures have a metallic character and are non-magnetic. These findings contribute to a better understanding of the properties and stability of Pt/Pd alloy structures that are relevant in various fields, including materials science and catalysis.")
+     st.header("Ab Initio Study of Structural, Electronic, and Thermal Properties of Pt/Pd-Based Alloys")
+     st.write("ABSTRACT:")
+     st.write("Alloys are beneficial in numerous applications since they combine the desirable properties of different metals. In this regard, Pt/Pd alloys have been investigated as a replacement for Pt, which is the standard catalyst used in various catalytic processes. However, there are still gaps in our understanding of the structural, mechanical, and thermodynamic properties of Pt/Pd alloys. This study was conducted using density functional theory (DFT) calculations to investigate the electronic, elasticity, mechanical, and thermodynamic properties of Pt/Pd alloys and compared them to pristine Pt and Pd structures. The results indicate that the considered Pt/Pd alloy structures, PtPd3, PtPd, Pt3Pd, and Pt7Pd, are energetically favourable based on their formation energies. These structures also satisfy Born’s stability criteria and are elastically stable. The phonon density of states showed that the considered Pt/Pd alloy structures are dynamically stable, with no imaginary modes present. Additionally, the Pt atom dominates at lower frequencies, while the Pd atom dominates at higher frequencies, as seen in the phonon band structure. The electronic density of states revealed that the considered Pt/Pd alloy structures have a metallic character and are non-magnetic. These findings contribute to a better understanding of the properties and stability of Pt/Pd alloy structures that are relevant in various fields, including materials science and catalysis.")
 
-#     st.link_button("Click to Go to Publication Journal", "https://doi.org/10.3390/condmat8030076")
-#  #   st.image('Graphical_abstract_bulkPaper.png',caption='Graphical Abstract')
-#     BB = Image.open('Graphical_abstract_bulkPaper.png')
-#     st.caption("Graphical Abstract")
-#     st.image(BB)
+     st.link_button("Click to Go to Publication Journal", "https://doi.org/10.3390/condmat8030076")
+  #   st.image('Graphical_abstract_bulkPaper.png',caption='Graphical Abstract')
+     BB = Image.open('Graphical_abstract_bulkPaper.png')
+     st.caption("Graphical Abstract")
+     st.image(BB)
 
 
 #  ######################################## The Pt/Ni and Pt/Co Catalysts data    
