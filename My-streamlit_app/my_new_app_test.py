@@ -39,7 +39,7 @@ if selected == "About Me":
 
 #Column 1 Stuff
 
-    louise = Image.open('media/lm_botha.png')
+    louise = Image.open('https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/lm_botha.PNG')
     col1.image(louise)
     #img= Image.open('media/undraw_Chat_bot_re_e2gj.png')
     #col1.image('lm_botha.png',caption= 'Dr LM Botha')
@@ -64,7 +64,7 @@ if selected == "About Me":
 #     col2.write("Currently a Postdoctoral Research Fellow at Hydrogen South Africa. My research focuses on using Density Functional Theory (DFT) to investigate alternative metal Catalysts used in Passive Autocatalytic Recombiners (PARs).")
 #     col2.divider()    
 #     col2.header("Hydrogen South Africa?") 
-#     col2.image('HYSA.png')
+#     col2.image('https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/HYSA.PNG')
 #     col2.write("The Department of Science and Technology of South Africa developed the National Hydrogen and Fuel Cells Technologies (HFCT) Research, Development and Innovation (RDI) Strategy. The National Strategy was branded Hydrogen South Africa (HySA). The overall goal of HySA is to develop and guide innovation along the value chain of hydrogen and fuel cell technologies in South Africa. The overall vision of the HFCT RDI strategy is to bring about wealth, jobs and IPR creation through the initiation of new high-technology industries based on minerals found on South African soil, especially Platinum Group Metals (PGMs)")
   
 #     with col2:
