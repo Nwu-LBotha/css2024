@@ -162,7 +162,8 @@ if selected == "Data: Pt/Pd bulks":
     
     if data_fig1 == "a) Pt":    
         ###A Pt
-        fig2_dataA = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure2_pt',index_col=None)
+        data_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/Paper2_bulkdata.xlsx' 
+        fig2_dataA = pd.read_excel(data_url,sheet_name='figure2_pt',index_col=None)
         plt.plot(fig2_dataA['volume'], fig2_dataA['energy'], color='blue', marker='o', linestyle='solid')
         SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
         Vol_fig = "A₃"  # Corrected here
