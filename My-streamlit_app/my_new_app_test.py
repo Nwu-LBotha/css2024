@@ -74,7 +74,7 @@ if selected == "About Me":
     hysa_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/HYSA.PNG?raw=true'
 
     # Display the image using st.image
-    with col1:
+    with col2:
        st.image(hysa_url, caption='HySA', use_column_width=True)    
     
     col2.write("The Department of Science and Technology of South Africa developed the National Hydrogen and Fuel Cells Technologies (HFCT) Research, Development and Innovation (RDI) Strategy. The National Strategy was branded Hydrogen South Africa (HySA). The overall goal of HySA is to develop and guide innovation along the value chain of hydrogen and fuel cell technologies in South Africa. The overall vision of the HFCT RDI strategy is to bring about wealth, jobs and IPR creation through the initiation of new high-technology industries based on minerals found on South African soil, especially Platinum Group Metals (PGMs)")
