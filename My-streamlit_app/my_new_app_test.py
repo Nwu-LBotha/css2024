@@ -10,12 +10,6 @@ Created on Mon Feb  5 18:35:02 2024
 Created on Fri Feb  2 22:42:14 2024
 @author: Louise
 
-# Heed my words: 
-# Is this app useful for none computational scientist....No
-# Is this app useful for those who want to use my data.....Yes
-# Is this app useful for myself....Yes, I lose data
-# Did I enjoy making this app.....Yes and No
-
 """
 import streamlit as st
 import pandas as pd
@@ -25,8 +19,8 @@ from PIL import Image
 
 # c:\users\louise\anaconda3\lib\site-packages
 # c:\users\louise\anaconda3\lib\site-packages
-st.set_page_config(layout="wide")
 
+st.set_page_config(layout="wide")
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # The side bar menu code. 
