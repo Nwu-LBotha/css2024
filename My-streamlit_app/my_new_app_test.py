@@ -39,7 +39,7 @@ if selected == "About Me":
 
 #Column 1 Stuff
 
-    louise = Image.open('https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/lm_botha.PNG')
+    louise = Image.open('Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/lm_botha.PNG')
     col1.image(louise)
     #img= Image.open('media/undraw_Chat_bot_re_e2gj.png')
     #col1.image('lm_botha.png',caption= 'Dr LM Botha')
