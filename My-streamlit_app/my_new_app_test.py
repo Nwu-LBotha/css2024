@@ -344,41 +344,40 @@ if data_fig1 == "a) Pt":
 
     data_fig3_2 = st.radio("Please select POS data to see",("Pt","Pd","PtPd3","PtPd","Pt3Pd","Pt7Pd"))
     
-    if data_fig3_2 == "Pt":
-        fig3_2_data_Ptband = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure3_dos',index_col=None,nrows=202)
-        plt.plot(fig3_2_data_Ptband['Pt'], fig3_2_data_Ptband['freq cm-1'], color='blue', linestyle='solid')
-        plt.xlabel("PDOS (a.u.)")
-        plt.ylabel("Frequency (/cm)")
-        plt.title("Band structure Pt")
-        st.pyplot()
+   if data_fig3_2 == "Pt":
+    fig3_2_data_Ptband = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure3_dos',index_col=None,nrows=202)
+    plt.plot(fig3_2_data_Ptband['Pt'], fig3_2_data_Ptband['freq cm-1'], color='blue', linestyle='solid')
+    plt.xlabel("PDOS (a.u.)")
+    plt.ylabel("Frequency (/cm)")
+    plt.title("Band structure Pt")
+    st.pyplot()
 
-        button2_band_pt = st.button("Show my Table")
-        
+    button2_band_pt = st.button("Show my Table")
+
     if button2_band_pt:
         st.table(fig3_2_data_Ptband)
 
-    if data_fig3_2 == "Pd":
-        st.title("Sorry data not yet updated, please come back another time")
-        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/nodata.gif?raw=true'
-        st.image(no_url, caption='no_url', use_column_width=True)
+if data_fig3_2 == "Pd":
+    st.title("Sorry data not yet updated, please come back another time")
+    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/nodata.gif?raw=true'
+    st.image(no_url, caption='no_url', use_column_width=True)
 
-    if data_fig3_2 == "PtPd3":
-        st.title("Sorry data not yet updated, please come back another time")
-        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/nodata.gif?raw=true'
-        st.image(no_url, caption='no_url', use_column_width=True)
+if data_fig3_2 == "PtPd3":
+    st.title("Sorry data not yet updated, please come back another time")
+    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/nodata.gif?raw=true'
+    st.image(no_url, caption='no_url', use_column_width=True)
 
-    if data_fig3_2 == "PtPd":
-        st.title("Sorry data not yet updated, please come back another time")
-        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/nodata.gif?raw=true'
-        st.image(no_url, caption='no_url', use_column_width=True)
+if data_fig3_2 == "PtPd":
+    st.title("Sorry data not yet updated, please come back another time")
+    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/nodata.gif?raw=true'
+    st.image(no_url, caption='no_url', use_column_width=True)
 
-    if data_fig3_2 == "Pt3Pd":
-        st.title("Sorry data not yet updated, please come back another time")
-        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/nodata.gif?raw=true'
-        st.image(no_url, caption='no_url', use_column_width=True)
+if data_fig3_2 == "Pt3Pd":
+    st.title("Sorry data not yet updated, please come back another time")
+    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/nodata.gif?raw=true'
+    st.image(no_url, caption='no_url', use_column_width=True)
 
-    if data_fig3_2 == "Pt7Pd":
-        st.title("Sorry data not yet updated, please come back another time")
-        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/nodata.gif?raw=true'
-        st.image(no_url, caption='no_url', use_column_width=True)
-
+if data_fig3_2 == "Pt7Pd":
+    st.title("Sorry data not yet updated, please come back another time")
+    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/nodata.gif?raw=true'
+    st.image(no_url, caption='no_url', use_column_width=True)
