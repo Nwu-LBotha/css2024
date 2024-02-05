@@ -357,7 +357,6 @@ if data_fig1 == "a) Pt":
     if button2_band_pt:
         st.table(fig3_2_data_Ptband)
 
-
     if data_fig3_2 == "Pd":
         st.title("Sorry data not yet updated, please come back another time")
         no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/nodata.gif?raw=true'
