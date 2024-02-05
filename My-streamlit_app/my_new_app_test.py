@@ -342,15 +342,15 @@ if data_fig1 == "a) Pt":
             
 #This is the second set of data which I added for fun. It is however not coplete since it is a lot of data to add.
 
-    data_fig3_2 = st.radio("Please select POS data to see",("Pt","Pd","PtPd3","PtPd","Pt3Pd","Pt7Pd"))
+       data_fig3_2 = st.radio("Please select POS data to see",("Pt","Pd","PtPd3","PtPd","Pt3Pd","Pt7Pd"))
     
-   if data_fig3_2 == "Pt":
-    fig3_2_data_Ptband = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure3_dos',index_col=None,nrows=202)
-    plt.plot(fig3_2_data_Ptband['Pt'], fig3_2_data_Ptband['freq cm-1'], color='blue', linestyle='solid')
-    plt.xlabel("PDOS (a.u.)")
-    plt.ylabel("Frequency (/cm)")
-    plt.title("Band structure Pt")
-    st.pyplot()
+    if data_fig3_2 == "Pt":
+        fig3_2_data_Ptband = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure3_dos',index_col=None,nrows=202)
+        plt.plot(fig3_2_data_Ptband['Pt'], fig3_2_data_Ptband['freq cm-1'], color='blue', linestyle='solid')
+        plt.xlabel("PDOS (a.u.)")
+        plt.ylabel("Frequency (/cm)")
+        plt.title("Band structure Pt")
+        st.pyplot()
 
     button2_band_pt = st.button("Show my Table")
 
