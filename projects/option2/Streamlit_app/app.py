@@ -8,6 +8,11 @@ Created on Fri Feb  2 22:42:14 2024
 import streamlit as st
 import pandas as pd
 #pip install streamlit-option-menu
+import sys
+
+sys.path.insert(1, "C:\Users\Louise\anaconda3\Lib\site-packages\streamlit_option_menu")
+
+from streamlit_option_menu import option_menu
 from streamlit_option_menu import option_menu
 from PIL import Image
 import matplotlib.pyplot as plt
