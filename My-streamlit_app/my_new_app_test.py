@@ -10,6 +10,12 @@ Created on Mon Feb  5 18:35:02 2024
 Created on Fri Feb  2 22:42:14 2024
 @author: Louise
 
+# Heed my words: 
+# Is this app useful for none computational scientist....No
+# Is this app useful for those who want to use my data.....Yes
+# Is this app useful for myself....Yes, I lose data
+# Did I enjoy making this app.....Yes and No
+
 """
 import streamlit as st
 import pandas as pd
@@ -19,8 +25,8 @@ from PIL import Image
 
 # c:\users\louise\anaconda3\lib\site-packages
 # c:\users\louise\anaconda3\lib\site-packages
-
 st.set_page_config(layout="wide")
+
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # The side bar menu code. 
@@ -124,6 +130,11 @@ if selected == "Data: Pt/Ni & Pt/Co":
     st.header("Hydrogen and oxygen recombination reaction on Pt–Ni and Pt–Co based alloys using density functional theory")
     st.title("Under Construction, Sorry for the Inconvenience!")
     st.image('nodata.gif')
+    
+    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/nodata.gif?raw=true'
+    st.image(hysa_url, caption='no_url', use_column_width=True)  
+    
+    
     
 #  ######################################## The Pt/Pd bulk profiles data    
 if selected == "Data: Pt/Pd bulks":
@@ -342,7 +353,7 @@ if data_fig1 == "a) Pt":
             
 #This is the second set of data which I added for fun. It is however not coplete since it is a lot of data to add.
 
-       data_fig3_2 = st.radio("Please select POS data to see",("Pt","Pd","PtPd3","PtPd","Pt3Pd","Pt7Pd"))
+    data_fig3_2 = st.radio("Please select POS data to see",("Pt","Pd","PtPd3","PtPd","Pt3Pd","Pt7Pd"))
     
     if data_fig3_2 == "Pt":
         fig3_2_data_Ptband = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure3_dos',index_col=None,nrows=202)
