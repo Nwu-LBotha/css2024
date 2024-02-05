@@ -117,44 +117,44 @@ if selected == "Publications":
 # # This is data to input later when I use this app for my work.
 # # Since I have not added this data, a 404 error is obtained with a cute image and a header.
 
-# if selected == "Data: Pt/Ni & Pt/Co":
-#     st.title(f"Repository {selected}")
-#     st.divider()
-#     st.header("Hydrogen and oxygen recombination reaction on Pt–Ni and Pt–Co based alloys using density functional theory")
-#     st.title("Under Construction, Sorry for the Inconvenience!")
-#     st.image('nodata.gif')
+ if selected == "Data: Pt/Ni & Pt/Co":
+     st.title(f"Repository {selected}")
+     st.divider()
+     st.header("Hydrogen and oxygen recombination reaction on Pt–Ni and Pt–Co based alloys using density functional theory")
+     st.title("Under Construction, Sorry for the Inconvenience!")
+     st.image('nodata.gif')
     
 #  ######################################## The Pt/Pd bulk profiles data    
 
-# if selected == "Data: Pt/Pd bulks":
-#     st.title(f"Repository {selected}")
-#     st.divider()
+ if selected == "Data: Pt/Pd bulks":
+     st.title(f"Repository {selected}")
+     st.divider()
 
-#     Fig1_paper2 = "Relative energies of PtPd3, PtPd, Pt3Pd, and Pt7Pd alloy structures."
-#     SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
-#     st.header("Figure 1: " + Fig1_paper2.translate(SUB))
+     Fig1_paper2 = "Relative energies of PtPd3, PtPd, Pt3Pd, and Pt7Pd alloy structures."
+     SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
+     st.header("Figure 1: " + Fig1_paper2.translate(SUB))
     
-#     #Inserting the data using Pandas to create dataframe 
+     #Inserting the data using Pandas to create dataframe 
     
-#     fig1_data = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure1',index_col=None)
+     fig1_data = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure1',index_col=None)
 
-#     # Plot using Matplotlib
-#     plt.plot(fig1_data['Percentage Pd'], fig1_data['Formation energy'], color='blue', marker='o', linestyle='solid')
-#     plt.xlabel("Percentage Pd (%)")
-#     plt.ylabel("Formation energy (eV)")
-#     plt.title("Figure 1")
-#     st.pyplot()
-#     st.caption("Table: Formation energies")
-#     st.table(fig1_data)
+     # Plot using Matplotlib
+     plt.plot(fig1_data['Percentage Pd'], fig1_data['Formation energy'], color='blue', marker='o', linestyle='solid')
+     plt.xlabel("Percentage Pd (%)")
+     plt.ylabel("Formation energy (eV)")
+     plt.title("Figure 1")
+     st.pyplot()
+     st.caption("Table: Formation energies")
+     st.table(fig1_data)
 
-#     Fig2_paper2 = "Murnaghan’s fit for the pristine (a) Pt and (b) Pd, as well as (c) PtPd3, (d) PtPd, (e) PtPd (L10), (f) Pt3Pd, and (g) Pt7Pd alloy structures (conventional unit cell structures)"
-#     SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
-#     st.header("Figure 2: " + Fig2_paper2.translate(SUB))
-#     Vol_fig = "A3"
-#     SUP = str.maketrans("0123456789", "⁰¹²³⁴⁵⁶⁷⁸⁹")
+     Fig2_paper2 = "Murnaghan’s fit for the pristine (a) Pt and (b) Pd, as well as (c) PtPd3, (d) PtPd, (e) PtPd (L10), (f) Pt3Pd, and (g) Pt7Pd alloy structures (conventional unit cell structures)"
+     SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
+     st.header("Figure 2: " + Fig2_paper2.translate(SUB))
+     Vol_fig = "A3"
+     SUP = str.maketrans("0123456789", "⁰¹²³⁴⁵⁶⁷⁸⁹")
         
-#     data_fig1 = st.radio("Please select data to see",("a) Pt","b) Pd","c) PtPd3","d) PtPd","e) Pt3Pd","f) Pt7Pd"))
-#     if data_fig1 == "a) Pt":
+     data_fig1 = st.radio("Please select data to see",("a) Pt","b) Pd","c) PtPd3","d) PtPd","e) Pt3Pd","f) Pt7Pd"))
+     if data_fig1 == "a) Pt":
 
 # ###Figure 2. Make pandas dataframe which outputs a Table and gives a plot, if able
 
