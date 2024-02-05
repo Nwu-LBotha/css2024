@@ -40,9 +40,18 @@ if selected == "About Me":
 #Column 1 Stuff
 
 
-    image_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/lm_botha.PNG?raw=true'
-    louise = Image.open('image_url')
-    col1.image(louise)
+    #image_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/lm_botha.PNG?raw=true'
+    #louise = Image.open('image_url')
+    #col1.image(louise)
+    
+    # Replace the URL with the raw URL of your image file on GitHub
+    image_url = 'https://github.com/Nwu-LBotha/css2024/raw/main/My-streamlit_app/media/lm_botha.PNG'
+
+    # Open the image using PIL
+    louise = Image.open(image_url)
+
+    # Display the image in a Streamlit column
+    st.image(louise, caption='LM Botha Image', use_column_width=True)
     #img= Image.open('media/undraw_Chat_bot_re_e2gj.png')
     #col1.image('lm_botha.png',caption= 'Dr LM Botha')
     #louise = Image.open('lm_botha.png')
