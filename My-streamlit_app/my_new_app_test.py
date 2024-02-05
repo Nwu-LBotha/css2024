@@ -47,8 +47,8 @@ if selected == "About Me":
     # Replace the URL with the raw URL of your image file on GitHub
     image_url = 'https://github.com/Nwu-LBotha/css2024/raw/main/My-streamlit_app/media/lm_botha.PNG'
 
-    # Open the image using PIL
-    louise = Image.open(image_url)
+    # Display the image using st.image
+    st.image(image_url, caption='LM Botha Image', use_column_width=True)
 
     # Display the image in a Streamlit column
     st.image(louise, caption='LM Botha Image', use_column_width=True)
