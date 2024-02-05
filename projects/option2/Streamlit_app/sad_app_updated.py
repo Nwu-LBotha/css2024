@@ -43,7 +43,7 @@ col2.markdown(link_html_hysa, unsafe_allow_html=True)
 st.header("Publications:")
 
 
-    data_fig1 = st.radio("Please select data to see",("Publication 1", "Publication 2"))
+data_fig1 = st.radio("Please select data to see",("Publication 1", "Publication 2"))
     if data_fig1 == "Publication 1":
              
         st.header("Hydrogen and oxygen recombination reaction on Pt–Ni and Pt–Co based alloys using density functional theory")
