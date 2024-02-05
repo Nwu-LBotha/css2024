@@ -135,7 +135,7 @@ if selected == "Data: Pt/Ni & Pt/Co":
 if selected == "Data: Pt/Pd bulks":
     st.title(f"Repository {selected}")
     st.divider()
-    st.header("Hydrogen and oxygen recombination reaction on Pt–Ni and Pt–Co based alloys using density functional theory")
+    st.header("Pt/Pd Bulk properties Repository")
     st.title("Under Construction, Sorry for the Inconvenience!")
     no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/nodata.gif?raw=true'
     st.image(no_url, use_column_width=True)  
