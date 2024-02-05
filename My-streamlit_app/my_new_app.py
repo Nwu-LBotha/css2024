@@ -14,6 +14,7 @@ import streamlit as st
 import pandas as pd
 from streamlit_option_menu import option_menu
 import matplotlib.pyplot as plt
+from PIL import Image 
 
 # c:\users\louise\anaconda3\lib\site-packages
 # c:\users\louise\anaconda3\lib\site-packages
@@ -38,7 +39,10 @@ if selected == "About Me":
 
 #Column 1 Stuff
 
-    col1.image('lm_botha.png',caption= 'Dr LM Botha')
+    louise = Image.open('lm_botha.png')
+    col1.image(louise)
+    #col1.image('lm_botha.png',caption= 'Dr LM Botha')
+    #louise = Image.open('lm_botha.png')
     col1.caption("email: louise.botha@nwu.ac.za") #Nah, will see 
   
     with col1:
@@ -61,21 +65,9 @@ if selected == "About Me":
     col2.header("Hydrogen South Africa?") 
     col2.image('HYSA.png')
     col2.write("The Department of Science and Technology of South Africa developed the National Hydrogen and Fuel Cells Technologies (HFCT) Research, Development and Innovation (RDI) Strategy. The National Strategy was branded Hydrogen South Africa (HySA). The overall goal of HySA is to develop and guide innovation along the value chain of hydrogen and fuel cell technologies in South Africa. The overall vision of the HFCT RDI strategy is to bring about wealth, jobs and IPR creation through the initiation of new high-technology industries based on minerals found on South African soil, especially Platinum Group Metals (PGMs)")
-    #link_url_hysa = "https://hysainfrastructure.com/"
-    #link_text_hysa = "Go to hysainfrastructure.com"
-    #link_html_hysa = f'<a href="{link_url_hysa}" target="_blank">{link_text_hysa}</a>'
-    #col2.markdown(link_html_hysa, unsafe_allow_html=True)
- 
+  
     with col2:
         st.link_button("Go to HYSA website", "https://hysainfrastructure.com")
-        # button_hysa = st.button("Go to HYSA website")
-        # if button_hysa:
-        #     link_url_hysa = "https://hysainfrastructure.com/"
-        #     link_text_hysa = "Go to hysainfrastructure.com"
-        #     link_html_hysa = f'<a href="{link_url_hysa}" target="_blank">{link_text_hysa}</a>'
-        #     col2.markdown(link_html_hysa, unsafe_allow_html=True)
- 
-
  
 ######################################## The PUBLICATIONS code           
               
@@ -91,7 +83,10 @@ if selected == "Publications":
     st.link_button("Click to Go to Publication Journal", "https://doi.org/10.1016/j.susc.2023.122354")
 
     # Render the link
-    st.image('Recomb_graphic_abstract.jpg',caption='Grapahical abstract')
+    #st.image('Recomb_graphic_abstract.jpg',caption='Grapahical abstract')
+    AA = Image.open('Recomb_graphic_abstract.jpg')
+    st.caption("Graphical Abstract")
+    st.image(AA)
     
     st.divider()
     
@@ -100,7 +95,11 @@ if selected == "Publications":
     st.write("Alloys are beneficial in numerous applications since they combine the desirable properties of different metals. In this regard, Pt/Pd alloys have been investigated as a replacement for Pt, which is the standard catalyst used in various catalytic processes. However, there are still gaps in our understanding of the structural, mechanical, and thermodynamic properties of Pt/Pd alloys. This study was conducted using density functional theory (DFT) calculations to investigate the electronic, elasticity, mechanical, and thermodynamic properties of Pt/Pd alloys and compared them to pristine Pt and Pd structures. The results indicate that the considered Pt/Pd alloy structures, PtPd3, PtPd, Pt3Pd, and Pt7Pd, are energetically favourable based on their formation energies. These structures also satisfy Born’s stability criteria and are elastically stable. The phonon density of states showed that the considered Pt/Pd alloy structures are dynamically stable, with no imaginary modes present. Additionally, the Pt atom dominates at lower frequencies, while the Pd atom dominates at higher frequencies, as seen in the phonon band structure. The electronic density of states revealed that the considered Pt/Pd alloy structures have a metallic character and are non-magnetic. These findings contribute to a better understanding of the properties and stability of Pt/Pd alloy structures that are relevant in various fields, including materials science and catalysis.")
 
     st.link_button("Click to Go to Publication Journal", "https://doi.org/10.3390/condmat8030076")
-    st.image('Graphical_abstract_bulkPaper.png',caption='Graphical Abstract')
+ #   st.image('Graphical_abstract_bulkPaper.png',caption='Graphical Abstract')
+    BB = Image.open('Graphical_abstract_bulkPaper.png')
+    st.caption("Graphical Abstract")
+    st.image(BB)
+
 
  ######################################## The Pt/Ni and Pt/Co Catalysts data    
 
