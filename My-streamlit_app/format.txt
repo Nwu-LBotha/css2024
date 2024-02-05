@@ -1,0 +1,16 @@
+section with a side_menu
+includes about me
+includes the publication
+
+
+The about me section
+consists on 2 col.
+The first one is pic, email, qualifications
+the second one is career etc.
+below them is a publication list with radio buttons for publication selection.
+
+The publication section.
+Just basic one with the publication.
+Some data, radio buttons and show table.
+Remove all except figure 2 data.
+

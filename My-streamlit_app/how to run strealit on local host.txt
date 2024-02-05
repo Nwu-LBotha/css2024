@@ -1,0 +1,21 @@
+streamlit run app.py
+
+python version
+Python 3.10.12
+
+where python
+C:\Program Files\Inkscape\bin\python.exe
+C:\Users\Louise\anaconda3\python.exe
+C:\Users\Louise\AppData\Local\Microsoft\WindowsApps\python.exe
+
+
+
+Streamlit version
+Streamlit, version 1.31.0
+
+where streamlit
+C:\Users\Louise\anaconda3\Scripts\streamlit.cmd
+C:\Users\Louise\anaconda3\Scripts\streamlit.exe
+
+pip install streamlit-option-menu
+
