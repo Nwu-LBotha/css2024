@@ -7,7 +7,6 @@ Created on Fri Feb  2 22:42:14 2024
 
 import streamlit as st
 import pandas as pd
-import openpyxl
 from streamlit_option_menu import option_menu
 from PIL import Image  
 import matplotlib.pyplot as plt
@@ -142,8 +141,8 @@ if selected == "Data: Pt/Pd bulks":
     st.header("Figure 1: " + Fig1_paper2.translate(SUB))
     
     #Inserting the data using Pandas to create dataframe 
-    data_url = 'https://github.com/Nwu-LBotha/css2024/raw/main/My-streamlit_app/media/Paper2_bulkdata.xlsx'
-    fig1_data = pd.read_excel(data_url, sheet_name='figure1', index_col=None)
+    data_url2 = 'https://github.com/Nwu-LBotha/css2024/raw/main/My-streamlit_app/media/Paper2_bulkdata.xlsx'
+    fig1_data = pd.read_excel(data_url2, sheet_name='figure1', index_col=None)
     # Plot using Matplotlib
     plt.plot(fig1_data['Percentage Pd'], fig1_data['Formation energy'], color='blue', marker='o', linestyle='solid')
     plt.xlabel("Percentage Pd (%)")
