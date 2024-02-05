@@ -10,7 +10,7 @@ import pandas as pd
 #pip install streamlit-option-menu
 import sys
 
-sys.path.insert(1, "C:\Users\Louise\anaconda3\Lib\site-packages\streamlit_option_menu")
+sys.path.insert(1, r'C:\Users\Louise\anaconda3\Lib\site-packages\streamlit_option_menu')
 
 from streamlit_option_menu import option_menu
 from streamlit_option_menu import option_menu
