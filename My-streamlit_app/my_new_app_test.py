@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
 """
+Created on Mon Feb  5 18:35:02 2024
+
+@author: Louise
+"""
+
+# -*- coding: utf-8 -*-
+"""
 Created on Fri Feb  2 22:42:14 2024
 @author: Louise
 
@@ -125,7 +132,6 @@ if selected == "Data: Pt/Ni & Pt/Co":
     st.image('nodata.gif')
     
 #  ######################################## The Pt/Pd bulk profiles data    
-
 if selected == "Data: Pt/Pd bulks":
     st.title(f"Repository {selected}")
     st.divider()
@@ -138,7 +144,7 @@ if selected == "Data: Pt/Pd bulks":
     
     fig1_data = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure1',index_col=None)
 
-     # Plot using Matplotlib
+    # Plot using Matplotlib
     plt.plot(fig1_data['Percentage Pd'], fig1_data['Formation energy'], color='blue', marker='o', linestyle='solid')
     plt.xlabel("Percentage Pd (%)")
     plt.ylabel("Formation energy (eV)")
@@ -152,7 +158,234 @@ if selected == "Data: Pt/Pd bulks":
     st.header("Figure 2: " + Fig2_paper2.translate(SUB))
     Vol_fig = "A3"
     SUP = str.maketrans("0123456789", "⁰¹²³⁴⁵⁶⁷⁸⁹")
-        
+    
+###Figure 2. Make pandas dataframe which outputs a Table and gives a plot, if able
+
+    ###Data for the A selection (Pt)
+    ###The axis lable has a subscript value so the Vol_fig.translate(SUP) code fixes that
+    ###Plots the table with captions and titles.    
+    
     data_fig1 = st.radio("Please select data to see",("a) Pt","b) Pd","c) PtPd3","d) PtPd","e) Pt3Pd","f) Pt7Pd"))
-    if data_fig1 == "a) Pt":
+if data_fig1 == "a) Pt":
+    fig2_dataA = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure2_pt',index_col=None)
+    plt.plot(fig2_dataA['volume'], fig2_dataA['energy'], color='blue', marker='o', linestyle='solid')
+    plt.xlabel("Volume "+Vol_fig.translate(SUP))
+    plt.ylabel("Energy (eV)")
+    plt.title("Figure 2(a) Pt")
+    st.pyplot()
+    st.caption("Table: Murnaghan’s fit for the pristine (a) Pt")
+    st.table(fig2_dataA)        
+
+    #### Data for the B selection (Pd)
+    if data_fig1 == "b) Pd":
+
+        fig2_dataB = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure2_pd',index_col=None)
+
+        plt.plot(fig2_dataB['volume'], fig2_dataB['energy'], color='blue', marker='o', linestyle='solid')
+        plt.xlabel("Volume "+Vol_fig.translate(SUP))
+        plt.ylabel("Energy (eV)")
+        plt.title("Figure 2(b) Pd")
+        st.pyplot()
+        st.caption("Table: Murnaghan’s fit for the pristine (a) Pt")
+        st.table(fig2_dataB)
+        
+        #### Data for the C selection (PtPd3)
+    if data_fig1 == "c) PtPd3":
+        fig2_dataC = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure2_A',index_col=None)
+        plt.plot(fig2_dataC['volume'], fig2_dataC['energy'], color='blue', marker='o', linestyle='solid')
+        plt.xlabel("Volume "+Vol_fig.translate(SUP))
+        plt.ylabel("Energy (eV)")
+        plt.title("Figure 2(c) PtPd3")
+        st.pyplot()
+        st.caption("Table: Murnaghan’s fit for the pristine (a) Pt")
+        st.table(fig2_dataC)
+    
+
+    #### Data for the D selection (PtPd)
+    if data_fig1 == "d) PtPd":
+        fig2_dataD = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure2_B',index_col=None)
+        plt.plot(fig2_dataD['volume'], fig2_dataD['energy'], color='blue', marker='o', linestyle='solid')
+        plt.xlabel("Volume "+Vol_fig.translate(SUP))
+        plt.ylabel("Energy (eV)")
+        plt.title("Figure 2(d) PtPd")
+        st.pyplot()
+        st.caption("Table: Murnaghan’s fit for the pristine (d) PtPd")
+        st.table(fig2_dataD)
+
+#### Data for the E selection (Pt3Pd)
+    
+    if data_fig1 == "e) Pt3Pd":
+        fig2_dataE = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure2_C',index_col=None)
+        plt.plot(fig2_dataE['volume'], fig2_dataE['energy'], color='blue', marker='o', linestyle='solid')
+        plt.xlabel("Volume "+Vol_fig.translate(SUP))
+        plt.ylabel("Energy (eV)")
+        plt.title("Figure 2(e) PtPd")
+        st.pyplot()
+        st.caption("Table: Murnaghan’s fit for the pristine (e) Pt")
+        st.table(fig2_dataE)
+
+####Data for the F selection Pt7Pd
+
+    if data_fig1 == "f) Pt7Pd":
+        fig2_dataF = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure2_D',index_col=None)
+        plt.plot(fig2_dataF['volume'], fig2_dataF['energy'], color='blue', marker='o', linestyle='solid')
+        plt.xlabel("Volume "+Vol_fig.translate(SUP))
+        plt.ylabel("Energy (eV)")
+        plt.title("Figure 2(f) Pt7Pd")
+        st.pyplot()
+        st.caption("Table: Murnaghan’s fit for the pristine (f) Pt7Pd")
+        st.table(fig2_dataF)
+        
+
+########################################################################################
+
+#####Figure 3. Comparison between calculated phonon band spectra and phonon DOS spectra for the pristine Pt and Pd structures.
+## Ads the headers supscript, like previous code.
+
+    Fig3_paper2 = "Comparison between calculated phonon band spectra and phonon DOS spectra for the pristine Pt and Pd structures."
+    SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
+    st.header("Figure 3: " + Fig3_paper2.translate(SUB))
+
+    #Ads a radio botton for the slection to reduce clunkyness
+    #Import dataframe for the correct sheet using a defined datarange using skiprows and nrows.
+
+    data_fig3 = st.radio("Please select Bandstructure data to see",("Pt","Pd","PtPd3","PtPd","Pt3Pd","Pt7Pd"))
+    if data_fig3 == "Pt":
+        fig3_data_Ptband = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure3_band',index_col=None,nrows=3129)
+        plt.scatter(fig3_data_Ptband['band'], fig3_data_Ptband['freq (cm-1)'],s=1, color='blue', linestyle='solid')
+        plt.xlabel("PDOS (a.u.)")
+        plt.ylabel("Frequency (/cm)")
+        plt.title("Band structure Pt")
+        st.pyplot()
+
+        button_band_pt = st.button("Show Table")
+        if button_band_pt:
+            st.table(fig3_data_Ptband)
+
+
+    if data_fig3 == "Pd":
+        fig3_data_Pdband = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure3_band',index_col=None,skiprows=range(2, 3131),nrows=6260)
+        plt.scatter(fig3_data_Pdband['band'], fig3_data_Pdband['freq (cm-1)'],s=1, color='black', linestyle='solid')
+        plt.xlabel("PDOS (a.u.)")
+        plt.ylabel("Frequency (/cm)")
+        plt.title("Band structure Pd")
+        st.pyplot()
+        
+        button_band_pd = st.button("Show Table")
+        if button_band_pd:
+            st.table(fig3_data_Pdband)
+
+# Import dataframe for the correct sheet using a defined datarange using skiprows and nrows.
+#nrows shows the number of rows used. 
+#PLots the data using scatter, small size and colour of green.
+#Ads titles to the axis and the graph,
+#Draws the plot
+
+    if data_fig3 == "PtPd3":
+        fig3_data_PtPd3 = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure3_band_alloys',index_col=None,nrows=4375)
+        plt.scatter(fig3_data_PtPd3['band'], fig3_data_PtPd3['freq (cm-1)'],s=1, color='cyan', linestyle='solid')
+        plt.xlabel("PDOS (a.u.)")
+        plt.ylabel("Frequency (/cm)")
+        plt.title("Band structure PtPd3")
+        st.pyplot()
+        
+        button_band_PtPd3 = st.button("Show Table")
+        if button_band_PtPd3:
+            st.table(fig3_data_PtPd3)
+
+#Skiprows, skips the previous data which is between 2 and  4376
+#nrows shows the number of rows used. This after the skipriws so it is from 4376 to 4426
+#PLots the data using scatter, small size and colour of green.
+#Ads titles to the axis and the graph,
+#Draws the plot 
+
+    if data_fig3 == "PtPd":
+        fig3_data_PtPd = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure3_band_alloys',index_col=None,skiprows=range(2, 4376),nrows=4426)
+        plt.scatter(fig3_data_PtPd['band'], fig3_data_PtPd['freq (cm-1)'],s=1, color='green', linestyle='solid')
+        plt.xlabel("PDOS (a.u.)")
+        plt.ylabel("Frequency (/cm)")
+        plt.title("Band structure PtPd")
+        st.pyplot()
+
+#The button is used to show the table data. This is due to the massive long data so users can hurt themselves.
+# Maybe add a save button for the data whihc exports to csv file????
+
+        
+        button_band_PtPd = st.button("Show Table")
+        if button_band_PtPd:
+            st.table(fig3_data_PtPd)
+
+#Skiprows, skips the previous data which is between 2 and  5906
+#nrows shows the number of rows used. This after the skipriws so it is from 5907 to 10255
+#PLots the data using scatter, small size and colour of green.
+#Ads titles to the axis and the graph,
+#Draws the plot
+
+    if data_fig3 == "Pt3Pd":
+        
+        fig3_data_Pt3Pd = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure3_band_alloys',index_col=None,skiprows=range(2, 5906),nrows=10255)
+        plt.scatter(fig3_data_Pt3Pd['band'], fig3_data_Pt3Pd['freq (cm-1)'], s=1,color='violet', linestyle='solid')
+        plt.xlabel("PDOS (a.u.)")
+        plt.ylabel("Frequency (/cm)")
+        plt.title("Band structure Pt3Pd")
+        st.pyplot()
+        
+        button_band_Pt3Pd = st.button("Show Table")
+        if button_band_Pt3Pd:
+            st.table(fig3_data_Pt3Pd)
+            
+    if data_fig3 == "Pt7Pd":
+        fig3_data_Pt7Pd = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure3_band_alloys',index_col=None,skiprows=range(2, 10284),nrows=17793)
+        plt.scatter(fig3_data_Pt7Pd['band'], fig3_data_Pt7Pd['freq (cm-1)'],s=1, color='red', linestyle='solid')
+        plt.xlabel("PDOS (a.u.)")
+        plt.ylabel("Frequency (/cm)")
+        plt.title("Band structure Pt7Pd")
+        st.pyplot()
+        
+        button_band_Pt7Pd = st.button("Show Table")
+        if button_band_Pt7Pd:
+            st.table(fig3_data_Pt7Pd)
+            
+#This is the second set of data which I added for fun. It is however not coplete since it is a lot of data to add.
+
+    data_fig3_2 = st.radio("Please select POS data to see",("Pt","Pd","PtPd3","PtPd","Pt3Pd","Pt7Pd"))
+    
+    if data_fig3_2 == "Pt":
+        fig3_2_data_Ptband = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure3_dos',index_col=None,nrows=202)
+        plt.plot(fig3_2_data_Ptband['Pt'], fig3_2_data_Ptband['freq cm-1'], color='blue', linestyle='solid')
+        plt.xlabel("PDOS (a.u.)")
+        plt.ylabel("Frequency (/cm)")
+        plt.title("Band structure Pt")
+        st.pyplot()
+
+        button2_band_pt = st.button("Show my Table")
+        if button2_band_pt:
+            st.table(fig3_2_data_Ptband)
+
+
+# This data is not finished so a sorry icon will be displayed with a header.
+
+    if data_fig3_2 == "Pd":
+        st.title("Sorry data not yet updated, please come back another time")
+        st.image('nodata.gif')
+        
+
+    if data_fig3_2 == "PtPd3":
+        st.title("Sorry data not yet updated, please come back another time")
+        st.image('nodata.gif')     
+
+
+    if data_fig3_2 == "PtPd":
+        st.title("Sorry data not yet updated, please come back another time")
+        st.image('nodata.gif')
+
+
+    if data_fig3_2 == "Pt3Pd":
+        st.title("Sorry data not yet updated, please come back another time")
+        st.image('nodata.gif')
+
+
+    if data_fig3_2 == "Pt7Pd":
+        st.title("Sorry data not yet updated, please come back another time")
+        st.image('nodata.gif')
 
