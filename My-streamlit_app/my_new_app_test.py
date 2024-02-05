@@ -353,33 +353,33 @@ if data_fig1 == "a) Pt":
         st.pyplot()
 
         button2_band_pt = st.button("Show my Table")
-        if button2_band_pt:
-            st.table(fig3_2_data_Ptband)
+        
+    if button2_band_pt:
+        st.table(fig3_2_data_Ptband)
 
-
-# This data is not finished so a sorry icon will be displayed with a header.
 
     if data_fig3_2 == "Pd":
         st.title("Sorry data not yet updated, please come back another time")
-        st.image('nodata.gif')
-        
+        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/nodata.gif?raw=true'
+        st.image(no_url, caption='no_url', use_column_width=True)
 
     if data_fig3_2 == "PtPd3":
         st.title("Sorry data not yet updated, please come back another time")
-        st.image('nodata.gif')     
-
+        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/nodata.gif?raw=true'
+        st.image(no_url, caption='no_url', use_column_width=True)
 
     if data_fig3_2 == "PtPd":
         st.title("Sorry data not yet updated, please come back another time")
-        st.image('nodata.gif')
-
+        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/nodata.gif?raw=true'
+        st.image(no_url, caption='no_url', use_column_width=True)
 
     if data_fig3_2 == "Pt3Pd":
         st.title("Sorry data not yet updated, please come back another time")
-        st.image('nodata.gif')
-
+        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/nodata.gif?raw=true'
+        st.image(no_url, caption='no_url', use_column_width=True)
 
     if data_fig3_2 == "Pt7Pd":
         st.title("Sorry data not yet updated, please come back another time")
-        st.image('nodata.gif')
+        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/nodata.gif?raw=true'
+        st.image(no_url, caption='no_url', use_column_width=True)
 
