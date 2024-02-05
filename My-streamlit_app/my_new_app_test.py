@@ -49,9 +49,7 @@ if selected == "About Me":
 
     # Display the image using st.image
     st.image(image_url, caption='LM Botha Image', use_column_width=True)
-
-    # Display the image in a Streamlit column
-    st.image(louise, caption='LM Botha Image', use_column_width=True)
+    
     #img= Image.open('media/undraw_Chat_bot_re_e2gj.png')
     #col1.image('lm_botha.png',caption= 'Dr LM Botha')
     #louise = Image.open('lm_botha.png')
