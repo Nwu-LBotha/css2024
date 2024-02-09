@@ -189,9 +189,9 @@ if data_fig1 == "f) Pt7Pd":
     st.image(no_url, use_column_width=True) 
         
 
-    Fig3_paper2 = "Comparison between calculated phonon band spectra and phonon DOS spectra for the pristine Pt and Pd structures."
-    SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
-    st.header("Figure 3: " + Fig3_paper2.translate(SUB))
+Fig3_paper2 = "Comparison between calculated phonon band spectra and phonon DOS spectra for the pristine Pt and Pd structures."
+SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
+st.header("Figure 3: " + Fig3_paper2.translate(SUB))
 
 
     data_fig3 = st.radio("Please select Bandstructure data to see",("Pt","Pd","PtPd3","PtPd","Pt3Pd","Pt7Pd"))
