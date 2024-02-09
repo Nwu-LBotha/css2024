@@ -139,3 +139,15 @@ if selected == "Data: Pt/Pd bulks":
     Fig1_paper2 = "Relative energies of PtPd3, PtPd, Pt3Pd, and Pt7Pd alloy structures."
     SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
     st.header("Figure 1: " + Fig1_paper2.translate(SUB))
+
+    excel_url = "https://github.com/Nwu-LBotha/css2024/raw/main/My-streamlit_app/media/Paper2_bulkdata.xlsx"
+    #fig1_data = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure1',index_col=None)
+
+    # Plot using Matplotlib
+    #plt.plot(fig1_data['Percentage Pd'], fig1_data['Formation energy'], color='blue', marker='o', linestyle='solid')
+    #plt.xlabel("Percentage Pd (%)")
+    #plt.ylabel("Formation energy (eV)")
+    #plt.title("Figure 1")
+    #st.pyplot()
+    #st.caption("Table: Formation energies")
+    #st.table(fig1_data)
