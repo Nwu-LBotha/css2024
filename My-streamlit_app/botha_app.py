@@ -23,6 +23,8 @@ from streamlit_option_menu import option_menu
 import matplotlib.pyplot as plt
 from PIL import Image 
 
+conda install openpyxl
+
 # c:\users\louise\anaconda3\lib\site-packages
 # c:\users\louise\anaconda3\lib\site-packages
 st.set_page_config(layout="wide")
