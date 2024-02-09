@@ -150,6 +150,7 @@ if selected == "Data: Pt/Pd bulks":
 
 
     data_fig1 = st.radio("Please select data to see",("a) Pt","b) Pd","c) PtPd3","d) PtPd","e) Pt3Pd","f) Pt7Pd"))
+    
 if data_fig1 == "a) Pt":
     st.title("a) Pt")
     no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig2a.PNG?raw=true'
@@ -188,17 +189,10 @@ if data_fig1 == "f) Pt7Pd":
     st.image(no_url, use_column_width=True) 
         
 
-########################################################################################
-
-#####Figure 3. Comparison between calculated phonon band spectra and phonon DOS spectra for the pristine Pt and Pd structures.
-## Ads the headers supscript, like previous code.
-
     Fig3_paper2 = "Comparison between calculated phonon band spectra and phonon DOS spectra for the pristine Pt and Pd structures."
     SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
     st.header("Figure 3: " + Fig3_paper2.translate(SUB))
 
-    #Ads a radio botton for the slection to reduce clunkyness
-    #Import dataframe for the correct sheet using a defined datarange using skiprows and nrows.
 
     data_fig3 = st.radio("Please select Bandstructure data to see",("Pt","Pd","PtPd3","PtPd","Pt3Pd","Pt7Pd"))
     if data_fig3 == "Pt":
@@ -222,13 +216,6 @@ if data_fig1 == "f) Pt7Pd":
             st.image(no_url, use_column_width=True) 
 
     
-
-# Import dataframe for the correct sheet using a defined datarange using skiprows and nrows.
-#nrows shows the number of rows used. 
-#PLots the data using scatter, small size and colour of green.
-#Ads titles to the axis and the graph,
-#Draws the plot
-
     if data_fig3 == "PtPd3":
         st.title("Sorry data not yet completed, please come back another time")
         no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
@@ -238,30 +225,17 @@ if data_fig1 == "f) Pt7Pd":
         if button_band_PtPd3:
             st.table(fig3_data_PtPd3)
 
-#Skiprows, skips the previous data which is between 2 and  4376
-#nrows shows the number of rows used. This after the skipriws so it is from 4376 to 4426
-#PLots the data using scatter, small size and colour of green.
-#Ads titles to the axis and the graph,
-#Draws the plot 
-
     if data_fig3 == "PtPd":
         st.title("Sorry data not yet completed, please come back another time")
         no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
         st.image(no_url, use_column_width=True) 
-
-#The button is used to show the table data. This is due to the massive long data so users can hurt themselves.
-# Maybe add a save button for the data whihc exports to csv file????
 
         
         button_band_PtPd = st.button("Show Table")
         if button_band_PtPd:
             st.table(fig3_data_PtPd)
 
-#Skiprows, skips the previous data which is between 2 and  5906
-#nrows shows the number of rows used. This after the skipriws so it is from 5907 to 10255
-#PLots the data using scatter, small size and colour of green.
-#Ads titles to the axis and the graph,
-#Draws the plot
+
 
     if data_fig3 == "Pt3Pd":
         st.title("Sorry data not yet completed, please come back another time")
@@ -281,7 +255,6 @@ if data_fig1 == "f) Pt7Pd":
         if button_band_Pt7Pd:
             st.table(fig3_data_Pt7Pd)
             
-#This is the second set of data which I added for fun. It is however not coplete since it is a lot of data to add.
 
     data_fig3_2 = st.radio("Please select POS data to see",("Pt","Pd","PtPd3","PtPd","Pt3Pd","Pt7Pd"))
     
