@@ -139,7 +139,7 @@ if selected == "Data: Pt/Pd bulks":
     SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
     st.header("Figure 1: " + Fig1_paper2.translate(SUB))
     
-    no_1 = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig1.PNG'
+    no_1 = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig1.PNG?raw=true'
     st.image(no_1, use_column_width=True) 
     
     Fig2_paper2 = "Murnaghan’s fit for the pristine (a) Pt and (b) Pd, as well as (c) PtPd3, (d) PtPd, (e) PtPd (L10), (f) Pt3Pd, and (g) Pt7Pd alloy structures (conventional unit cell structures)"
@@ -152,39 +152,39 @@ if selected == "Data: Pt/Pd bulks":
     data_fig1 = st.radio("Please select data to see",("a) Pt","b) Pd","c) PtPd3","d) PtPd","e) Pt3Pd","f) Pt7Pd"))
 if data_fig1 == "a) Pt":
     st.title("Sorry data not yet completed, please come back another time")
-    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig2a.PNG?raw=true'
     st.image(no_url, use_column_width=True)    
 
     #### Data for the B selection (Pd)
 if data_fig1 == "b) Pd":
     st.title("Sorry data not yet completed, please come back another time")
-    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig2_b.PNG?raw=true'
     st.image(no_url, use_column_width=True) 
         
         #### Data for the C selection (PtPd3)
 if data_fig1 == "c) PtPd3":
         st.title("Sorry data not yet completed, please come back another time")
-        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig2_c.PNG?raw=true'
         st.image(no_url, use_column_width=True) 
     
     #### Data for the D selection (PtPd)
 if data_fig1 == "d) PtPd":
     st.title("Sorry data not yet completed, please come back another time")
-    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig2_d.PNG?raw=true'
     st.image(no_url, use_column_width=True) 
 
 #### Data for the E selection (Pt3Pd)
     
 if data_fig1 == "e) Pt3Pd":
     st.title("Sorry data not yet completed, please come back another time")
-    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig2_e.PNG?raw=true'
     st.image(no_url, use_column_width=True) 
 
 ####Data for the F selection Pt7Pd
 
 if data_fig1 == "f) Pt7Pd":
     st.title("Sorry data not yet completed, please come back another time")
-    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig2_f.PNG?raw=true'
     st.image(no_url, use_column_width=True) 
         
 
