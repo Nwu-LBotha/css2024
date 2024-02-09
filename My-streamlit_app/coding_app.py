@@ -134,18 +134,196 @@ if selected == "Data: Pt/Ni & Pt/Co":
 if selected == "Data: Pt/Pd bulks":
     st.title(f"Repository {selected}")
     st.divider()
-    
-    Fig1_paper2 = "Relative energies of PtPd3, PtPd, Pt3Pd, and Pt7Pd alloy structures."
-    SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
-    st.header("Figure 1: " + Fig1_paper2.translate(SUB))
 
-    # Load data
-    csv_url = "https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/Paper2_bulk_fig1.csv"
-    try:
-        # Assuming that the file might have more than one field
-        fig1_data = pd.read_csv(csv_url, error_bad_lines=False)
+    st.title("Sorry data not yet completed, please come back another time")
+    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+    st.image(no_url, use_column_width=True)  
     
-        st.write("DataFrame from CSV file:")
-        st.write(fig1_data)
-    except Exception as e:
-        st.error(f"An error occurred: {e}")
+    Fig2_paper2 = "Murnaghan’s fit for the pristine (a) Pt and (b) Pd, as well as (c) PtPd3, (d) PtPd, (e) PtPd (L10), (f) Pt3Pd, and (g) Pt7Pd alloy structures (conventional unit cell structures)"
+    SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
+    st.header("Figure 2: " + Fig2_paper2.translate(SUB))
+    Vol_fig = "A3"
+    SUP = str.maketrans("0123456789", "⁰¹²³⁴⁵⁶⁷⁸⁹")
+    
+###Figure 2. Make pandas dataframe which outputs a Table and gives a plot, if able
+
+    ###Data for the A selection (Pt)
+    ###The axis lable has a subscript value so the Vol_fig.translate(SUP) code fixes that
+    ###Plots the table with captions and titles.    
+    
+    data_fig1 = st.radio("Please select data to see",("a) Pt","b) Pd","c) PtPd3","d) PtPd","e) Pt3Pd","f) Pt7Pd"))
+if data_fig1 == "a) Pt":
+    st.title("Sorry data not yet completed, please come back another time")
+    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+    st.image(no_url, use_column_width=True)    
+
+    #### Data for the B selection (Pd)
+if data_fig1 == "b) Pd":
+    st.title("Sorry data not yet completed, please come back another time")
+    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+    st.image(no_url, use_column_width=True) 
+        
+        #### Data for the C selection (PtPd3)
+if data_fig1 == "c) PtPd3":
+        st.title("Sorry data not yet completed, please come back another time")
+        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+        st.image(no_url, use_column_width=True) 
+    
+    #### Data for the D selection (PtPd)
+if data_fig1 == "d) PtPd":
+    st.title("Sorry data not yet completed, please come back another time")
+    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+    st.image(no_url, use_column_width=True) 
+
+#### Data for the E selection (Pt3Pd)
+    
+if data_fig1 == "e) Pt3Pd":
+    st.title("Sorry data not yet completed, please come back another time")
+    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+    st.image(no_url, use_column_width=True) 
+
+####Data for the F selection Pt7Pd
+
+if data_fig1 == "f) Pt7Pd":
+    st.title("Sorry data not yet completed, please come back another time")
+    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+    st.image(no_url, use_column_width=True) 
+        
+
+########################################################################################
+
+#####Figure 3. Comparison between calculated phonon band spectra and phonon DOS spectra for the pristine Pt and Pd structures.
+## Ads the headers supscript, like previous code.
+
+    Fig3_paper2 = "Comparison between calculated phonon band spectra and phonon DOS spectra for the pristine Pt and Pd structures."
+    SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
+    st.header("Figure 3: " + Fig3_paper2.translate(SUB))
+
+    #Ads a radio botton for the slection to reduce clunkyness
+    #Import dataframe for the correct sheet using a defined datarange using skiprows and nrows.
+
+    data_fig3 = st.radio("Please select Bandstructure data to see",("Pt","Pd","PtPd3","PtPd","Pt3Pd","Pt7Pd"))
+    if data_fig3 == "Pt":
+        st.title("Sorry data not yet completed, please come back another time")
+        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+        st.image(no_url, use_column_width=True) 
+
+        button_band_pt = st.button("Show Table")
+        if button_band_pt:
+            st.table(fig3_data_Ptband)
+
+
+    if data_fig3 == "Pd":
+        st.title("Sorry data not yet completed, please come back another time")
+        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+        st.image(no_url, use_column_width=True) 
+        
+        button_band_pd = st.button("Show Table")
+        if button_band_pd:
+            st.table(fig3_data_Pdband)
+
+# Import dataframe for the correct sheet using a defined datarange using skiprows and nrows.
+#nrows shows the number of rows used. 
+#PLots the data using scatter, small size and colour of green.
+#Ads titles to the axis and the graph,
+#Draws the plot
+
+    if data_fig3 == "PtPd3":
+        st.title("Sorry data not yet completed, please come back another time")
+        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+        st.image(no_url, use_column_width=True) 
+        
+        button_band_PtPd3 = st.button("Show Table")
+        if button_band_PtPd3:
+            st.table(fig3_data_PtPd3)
+
+#Skiprows, skips the previous data which is between 2 and  4376
+#nrows shows the number of rows used. This after the skipriws so it is from 4376 to 4426
+#PLots the data using scatter, small size and colour of green.
+#Ads titles to the axis and the graph,
+#Draws the plot 
+
+    if data_fig3 == "PtPd":
+        st.title("Sorry data not yet completed, please come back another time")
+        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+        st.image(no_url, use_column_width=True) 
+
+#The button is used to show the table data. This is due to the massive long data so users can hurt themselves.
+# Maybe add a save button for the data whihc exports to csv file????
+
+        
+        button_band_PtPd = st.button("Show Table")
+        if button_band_PtPd:
+            st.table(fig3_data_PtPd)
+
+#Skiprows, skips the previous data which is between 2 and  5906
+#nrows shows the number of rows used. This after the skipriws so it is from 5907 to 10255
+#PLots the data using scatter, small size and colour of green.
+#Ads titles to the axis and the graph,
+#Draws the plot
+
+    if data_fig3 == "Pt3Pd":
+        st.title("Sorry data not yet completed, please come back another time")
+        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+        st.image(no_url, use_column_width=True) 
+        
+        button_band_Pt3Pd = st.button("Show Table")
+        if button_band_Pt3Pd:
+            st.table(fig3_data_Pt3Pd)
+            
+    if data_fig3 == "Pt7Pd":
+        st.title("Sorry data not yet completed, please come back another time")
+        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+        st.image(no_url, use_column_width=True) 
+        
+        button_band_Pt7Pd = st.button("Show Table")
+        if button_band_Pt7Pd:
+            st.table(fig3_data_Pt7Pd)
+            
+#This is the second set of data which I added for fun. It is however not coplete since it is a lot of data to add.
+
+    data_fig3_2 = st.radio("Please select POS data to see",("Pt","Pd","PtPd3","PtPd","Pt3Pd","Pt7Pd"))
+    
+    if data_fig3_2 == "Pt":
+        st.title("Sorry data not yet completed, please come back another time")
+        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+        st.image(no_url, use_column_width=True) 
+
+        button2_band_pt = st.button("Show my Table")
+        if button2_band_pt:
+            st.title("Sorry data not yet completed, please come back another time")
+            no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+            st.image(no_url, use_column_width=True) 
+
+
+# This data is not finished so a sorry icon will be displayed with a header.
+
+    if data_fig3_2 == "Pd":
+        st.title("Sorry data not yet completed, please come back another time")
+        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+        st.image(no_url, use_column_width=True) 
+        
+
+    if data_fig3_2 == "PtPd3":
+        st.title("Sorry data not yet completed, please come back another time")
+        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+        st.image(no_url, use_column_width=True) 
+
+
+    if data_fig3_2 == "PtPd":
+        st.title("Sorry data not yet completed, please come back another time")
+        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+        st.image(no_url, use_column_width=True) 
+
+
+    if data_fig3_2 == "Pt3Pd":
+        st.title("Sorry data not yet completed, please come back another time")
+        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+        st.image(no_url, use_column_width=True) 
+
+
+    if data_fig3_2 == "Pt7Pd":
+        st.title("Sorry data not yet completed, please come back another time")
+        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+        st.image(no_url, use_column_width=True) 
+
