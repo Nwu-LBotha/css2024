@@ -139,14 +139,13 @@ if selected == "Data: Pt/Pd bulks":
     SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
     st.header("Figure 1: " + Fig1_paper2.translate(SUB))
 
-    file = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/book1.csv'
-    fig1_data = pd.read_csv(file,index_col=None)
-
-    # Plot using Matplotlib
-    plt.plot(fig1_data['Percentage Pd'], fig1_data['Formation energy'], color='blue', marker='o', linestyle='solid')
-    plt.xlabel("Percentage Pd (%)")
-    plt.ylabel("Formation energy (eV)")
-    plt.title("Figure 1")
-    st.pyplot()
-    st.caption("Table: Formation energies")
-    st.table(fig1_data)
+    # Load data
+    csv_url = "https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/Paper2_bulk_fig1.csv"
+    try:
+    # Assuming that the file might have more than one field
+        fig1_data = pd.read_csv(csv_url, error_bad_lines=False)
+        st.write("DataFrame from CSV file:")
+        st.write(fig1_data)
+    except Exception as e:
+        st.error(f"An error occurred: {e}")
+    
