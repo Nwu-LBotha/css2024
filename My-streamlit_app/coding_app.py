@@ -151,39 +151,39 @@ if selected == "Data: Pt/Pd bulks":
 
     data_fig1 = st.radio("Please select data to see",("a) Pt","b) Pd","c) PtPd3","d) PtPd","e) Pt3Pd","f) Pt7Pd"))
 if data_fig1 == "a) Pt":
-    st.title("Sorry data not yet completed, please come back another time")
+    st.title("a) Pt")
     no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig2a.PNG?raw=true'
     st.image(no_url, use_column_width=True)    
 
     #### Data for the B selection (Pd)
 if data_fig1 == "b) Pd":
-    st.title("Sorry data not yet completed, please come back another time")
+    st.title("b) Pd")
     no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig2_b.PNG?raw=true'
     st.image(no_url, use_column_width=True) 
         
         #### Data for the C selection (PtPd3)
 if data_fig1 == "c) PtPd3":
-        st.title("Sorry data not yet completed, please come back another time")
+        st.title("c) PtPd3")
         no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig2_c.PNG?raw=true'
         st.image(no_url, use_column_width=True) 
     
     #### Data for the D selection (PtPd)
 if data_fig1 == "d) PtPd":
-    st.title("Sorry data not yet completed, please come back another time")
+    st.title("d) PtPd")
     no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig2_d.PNG?raw=true'
     st.image(no_url, use_column_width=True) 
 
 #### Data for the E selection (Pt3Pd)
     
 if data_fig1 == "e) Pt3Pd":
-    st.title("Sorry data not yet completed, please come back another time")
+    st.title("e) Pt3Pd")
     no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig2_e.PNG?raw=true'
     st.image(no_url, use_column_width=True) 
 
 ####Data for the F selection Pt7Pd
 
 if data_fig1 == "f) Pt7Pd":
-    st.title("Sorry data not yet completed, please come back another time")
+    st.title("f) Pt7Pd")
     no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig2_f.PNG?raw=true'
     st.image(no_url, use_column_width=True) 
         
@@ -202,8 +202,8 @@ if data_fig1 == "f) Pt7Pd":
 
     data_fig3 = st.radio("Please select Bandstructure data to see",("Pt","Pd","PtPd3","PtPd","Pt3Pd","Pt7Pd"))
     if data_fig3 == "Pt":
-        st.title("Sorry data not yet completed, please come back another time")
-        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
+        st.title("a) Pt")
+        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/pdos_a.PNG?raw=true'
         st.image(no_url, use_column_width=True) 
 
         button_band_pt = st.button("Show Table")
@@ -212,13 +212,16 @@ if data_fig1 == "f) Pt7Pd":
 
 
     if data_fig3 == "Pd":
-        st.title("Sorry data not yet completed, please come back another time")
+        st.title("b) Pd")
         no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/under_const.jpg?raw=true'
         st.image(no_url, use_column_width=True) 
         
         button_band_pd = st.button("Show Table")
         if button_band_pd:
-            st.table(fig3_data_Pdband)
+            no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/tab2_a.PNG?raw=true'
+            st.image(no_url, use_column_width=True) 
+
+    
 
 # Import dataframe for the correct sheet using a defined datarange using skiprows and nrows.
 #nrows shows the number of rows used. 
