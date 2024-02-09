@@ -124,7 +124,7 @@ if selected == "Data: Pt/Ni & Pt/Co":
     st.title(f"Repository {selected}")
     st.divider()
     st.header("Hydrogen and oxygen recombination reaction on Pt–Ni and Pt–Co based alloys using density functional theory")
-    st.title("Under Construction, Sorry for the Inconvenience!")
+    st.title("Data not compleated, Sorry for the Inconvenience!")
     no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/nodata.gif?raw=true'
     st.image(no_url, use_column_width=True)  
     
@@ -135,24 +135,13 @@ if selected == "Data: Pt/Pd bulks":
     st.title(f"Repository {selected}")
     st.divider()
 
-
     Fig1_paper2 = "Relative energies of PtPd3, PtPd, Pt3Pd, and Pt7Pd alloy structures."
     SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
     st.header("Figure 1: " + Fig1_paper2.translate(SUB))
     
-    #Using Pandas to create my dataframe 
+    no_1 = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig1.PNG?raw=true'
+    st.image(no_1, use_column_width=True) 
     
-    fig1_data = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure1',index_col=None)
-
-    # Plot using Matplotlib
-    plt.plot(fig1_data['Percentage Pd'], fig1_data['Formation energy'], color='blue', marker='o', linestyle='solid')
-    plt.xlabel("Percentage Pd (%)")
-    plt.ylabel("Formation energy (eV)")
-    plt.title("Figure 1")
-    st.pyplot()
-    st.caption("Table: Formation energies")
-    st.table(fig1_data)
-
 
     Fig2_paper2 = "Murnaghan’s fit for the pristine (a) Pt and (b) Pd, as well as (c) PtPd3, (d) PtPd, (e) PtPd (L10), (f) Pt3Pd, and (g) Pt7Pd alloy structures (conventional unit cell structures)"
     SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
