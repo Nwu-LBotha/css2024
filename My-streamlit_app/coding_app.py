@@ -152,7 +152,7 @@ if selected == "Data: Pt/Pd bulks":
     st.write("DataFrame from CSV file:")
     st.write(fig1_data)
     except Exception as e:
-       st.error(f"An error occurred: {e}")
+    st.error(f"An error occurred: {e}")
 
     # Plot using Matplotlib
     #plt.plot(fig1_data['Percentage Pd'], fig1_data['Formation energy'], color='blue', marker='o', linestyle='solid')
