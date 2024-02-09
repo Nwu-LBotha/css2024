@@ -139,14 +139,16 @@ if selected == "Data: Pt/Pd bulks":
     SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
     st.header("Figure 1: " + Fig1_paper2.translate(SUB))
     
+    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig1.PNG'
+    st.image(no_url, use_column_width=True) 
     
     Fig2_paper2 = "Murnaghan’s fit for the pristine (a) Pt and (b) Pd, as well as (c) PtPd3, (d) PtPd, (e) PtPd (L10), (f) Pt3Pd, and (g) Pt7Pd alloy structures (conventional unit cell structures)"
     SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
     st.header("Figure 2: " + Fig2_paper2.translate(SUB))
     Vol_fig = "A3"
     SUP = str.maketrans("0123456789", "⁰¹²³⁴⁵⁶⁷⁸⁹")
-    
- 
+
+
     data_fig1 = st.radio("Please select data to see",("a) Pt","b) Pd","c) PtPd3","d) PtPd","e) Pt3Pd","f) Pt7Pd"))
 if data_fig1 == "a) Pt":
     st.title("Sorry data not yet completed, please come back another time")
