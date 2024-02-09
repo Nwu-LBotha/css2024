@@ -148,7 +148,7 @@ if selected == "Data: Pt/Pd bulks":
 
     # Read the Excel file into a DataFrame
     try:
-        fig1_data = pd.read_csv(excel_url, sheet_name='figure1')  # Specify the engine for reading .xlsx files
+        fig1_data = pd.read_csv(csv_url, sheet_name='figure1')  # Specify the engine for reading .xlsx files
         st.write("DataFrame from Excel file:")
         st.write(fig1_data)
     except Exception as e:
