@@ -221,7 +221,7 @@ if selected == "Data: Pt/Pd bulks":
 
     if data_fig3 == "PtPd3":
         #st.title("a) Pt")
-        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/tab2_a.PNG?raw=tru'
+        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/band_c.PNG?raw=true'
         st.image(no_url, use_column_width=True) 
         
         button_band_PtPd3 = st.button("Show Table")
@@ -232,7 +232,7 @@ if selected == "Data: Pt/Pd bulks":
 
     if data_fig3 == "PtPd":
         #st.title("a) Pt")
-        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/pdos_d.PNG?raw=true'
+        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/band_d.PNG?raw=true'
         st.image(no_url, use_column_width=True) 
         
         button_band_PtPd = st.button("Show Table")
@@ -242,8 +242,7 @@ if selected == "Data: Pt/Pd bulks":
 
 
     if data_fig3 == "Pt3Pd":
-        
-        #st.title("a) Pt")
+     
         no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/pdos_e.PNG?raw=true'
         st.image(no_url, use_column_width=True) 
         
