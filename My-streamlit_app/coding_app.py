@@ -135,7 +135,7 @@ if selected == "Data: Pt/Ni & Pt/Co":
 if selected == "Data: Pt/Pd bulks":
     st.title(f"Repository {selected}")
     st.divider()
-    st.header("Pt/Pd Bulk properties Repository")
-    st.title("Under Construction, Sorry for the Inconvenience!")
-    no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/nodata.gif?raw=true'
-    st.image(no_url, use_column_width=True)  
+    
+    Fig1_paper2 = "Relative energies of PtPd3, PtPd, Pt3Pd, and Pt7Pd alloy structures."
+    SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
+    st.header("Figure 1: " + Fig1_paper2.translate(SUB))
