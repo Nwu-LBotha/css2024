@@ -139,8 +139,8 @@ if selected == "Data: Pt/Pd bulks":
     SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
     st.header("Figure 1: " + Fig1_paper2.translate(SUB))
 
-    file = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/Paper2_bulk_fig1.csv'
-    fig1_data = pd.read_csv(file,sheet_name='figure1',index_col=None)
+    file = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/book1.csv'
+    fig1_data = pd.read_csv(file,index_col=None)
 
     # Plot using Matplotlib
     plt.plot(fig1_data['Percentage Pd'], fig1_data['Formation energy'], color='blue', marker='o', linestyle='solid')
