@@ -152,40 +152,40 @@ if selected == "Data: Pt/Pd bulks":
     
     data_fig1 = st.radio("Please select data to see",("a) Pt","b) Pd","c) PtPd3","d) PtPd","e) Pt3Pd","f) Pt7Pd"))
     if data_fig1 == "a) Pt":
-        st.title("a) Pt")
+        #st.title("a) Pt")
         no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig2a.PNG?raw=true'
         st.image(no_url, use_column_width=True)      
 
 # ###B Pd
     if data_fig1 == "b) Pd":
 
-        st.title("b) Pd")
+        #st.title("b) Pd")
         no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig2_b.PNG?raw=true'
         st.image(no_url, use_column_width=True)  
         
 # ###C PtPd3
     if data_fig1 == "c) PtPd3":
-        st.title("c) PtPd3")
+        #st.title("c) PtPd3")
         no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig2_c.PNG?raw=true'
         st.image(no_url, use_column_width=True)  
     
 
 # ###D PtPd
     if data_fig1 == "d) PtPd":
-        st.title("d) PtPd")
+        #st.title("d) PtPd")
         no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig2_d.PNG?raw=true'
         st.image(no_url, use_column_width=True)  
 
 # ###E Pt3Pd
     
     if data_fig1 == "e) Pt3Pd":
-        st.title("e) Pt3Pd")
+        #st.title("e) Pt3Pd")
         no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig2_e.PNG?raw=true'
         st.image(no_url, use_column_width=True)  
 
 # ###F Pt7Pd
     if data_fig1 == "f) Pt7Pd":
-        st.title("f) Pt7Pd")
+        #st.title("f) Pt7Pd")
         no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/fig2_f.PNG?raw=true'
         st.image(no_url, use_column_width=True)  
         
@@ -198,7 +198,7 @@ if selected == "Data: Pt/Pd bulks":
 
     data_fig3 = st.radio("Please select Bandstructure data to see",("Pt","Pd","PtPd3","PtPd","Pt3Pd","Pt7Pd"))
     if data_fig3 == "Pt":
-        st.title("a) Pt")
+        #st.title("a) Pt")
         no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/pdos_a.PNG?raw=true'
         st.image(no_url, use_column_width=True) 
 
@@ -209,7 +209,7 @@ if selected == "Data: Pt/Pd bulks":
 
 
     if data_fig3 == "Pd":
-        st.title("a) Pt")
+        #st.title("a) Pt")
         no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/pdos_b.PNG?raw=true'
         st.image(no_url, use_column_width=True) 
         
@@ -220,7 +220,7 @@ if selected == "Data: Pt/Pd bulks":
 
 
     if data_fig3 == "PtPd3":
-        st.title("a) Pt")
+        #st.title("a) Pt")
         no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/pdos_c.PNG?raw=true'
         st.image(no_url, use_column_width=True) 
         
@@ -231,7 +231,7 @@ if selected == "Data: Pt/Pd bulks":
 
 
     if data_fig3 == "PtPd":
-        st.title("a) Pt")
+        #st.title("a) Pt")
         no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/pdos_d.PNG?raw=true'
         st.image(no_url, use_column_width=True) 
         
@@ -243,7 +243,7 @@ if selected == "Data: Pt/Pd bulks":
 
     if data_fig3 == "Pt3Pd":
         
-        st.title("a) Pt")
+        #st.title("a) Pt")
         no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/pdos_e.PNG?raw=true'
         st.image(no_url, use_column_width=True) 
         
@@ -253,7 +253,7 @@ if selected == "Data: Pt/Pd bulks":
             st.image(no_url, use_column_width=True) 
             
     if data_fig3 == "Pt7Pd":
-        st.title("a) Pt")
+        #st.title("a) Pt")
         no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/pdos_f.PNG?raw=true'
         st.image(no_url, use_column_width=True) 
         
