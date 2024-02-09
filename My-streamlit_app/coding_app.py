@@ -140,10 +140,20 @@ if selected == "Data: Pt/Pd bulks":
     SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
     st.header("Figure 1: " + Fig1_paper2.translate(SUB))
 
-    excel_url = "https://github.com/Nwu-LBotha/css2024/raw/main/My-streamlit_app/media/Paper2_bulkdata.xlsx"
+    #excel_url = "https://github.com/Nwu-LBotha/css2024/raw/main/My-streamlit_app/media/Paper2_bulkdata.xlsx"
     #fig1_data = pd.read_excel("Paper2_bulkdata.xlsx",sheet_name='figure1',index_col=None)
-    fig1_data = pd.read_excel(excel_url, sheet_name='figure1', engine='openpyxl')  # Specify the engine for reading .xlsx files
+    #fig1_data = pd.read_excel(excel_url, sheet_name='figure1', engine='openpyxl')  # Specify the engine for reading .xlsx files
 
+    # Define the URL of the Excel file
+    excel_url = "https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/Paper2_bulkdata_fig1.xlsx"
+
+    # Read the Excel file into a DataFrame
+    try:    
+        fig1_data = pd.read_excel(excel_url, sheet_name='figure1', engine='openpyxl')  # Specify the engine for reading .xlsx files
+        st.write("DataFrame from Excel file:")
+        st.write(fig1_data)
+    except Exception as e:
+        st.error(f"An error occurred: {e}")
 
     # Plot using Matplotlib
     #plt.plot(fig1_data['Percentage Pd'], fig1_data['Formation energy'], color='blue', marker='o', linestyle='solid')
