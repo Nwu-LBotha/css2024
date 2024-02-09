@@ -264,7 +264,7 @@ if selected == "Data: Pt/Pd bulks":
             
 #gg
 
-    data_fig3_2 = st.radio("Please select POS data to see",("Pt","Pd","PtPd3","PtPd","Pt3Pd","Pt7Pd"))
+    data_fig3_2 = st.radio("Please select POS data to see",("Pt"))
     
     if data_fig3_2 == "Pt":
         no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/pdos_a.PNG?raw=true'
@@ -272,28 +272,6 @@ if selected == "Data: Pt/Pd bulks":
 
         button2_band_pt = st.button("Show my Table")
         if button2_band_pt:
-            st.table(fig3_2_data_Ptband)
+            no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/pdos_a.PNG?raw=true'
+            st.image(no_url, use_column_width=True) 
             
-    if data_fig3_2 == "Pd":
-        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/pdos_a.PNG?raw=true'
-        st.image(no_url, use_column_width=True) 
-        
-
-    if data_fig3_2 == "PtPd3":
-        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/pdos_a.PNG?raw=true'
-        st.image(no_url, use_column_width=True)      
-
-
-    if data_fig3_2 == "PtPd":
-        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/pdos_a.PNG?raw=true'
-        st.image(no_url, use_column_width=True) 
-
-
-    if data_fig3_2 == "Pt3Pd":
-        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/pdos_a.PNG?raw=true'
-        st.image(no_url, use_column_width=True) 
-
-
-    if data_fig3_2 == "Pt7Pd":
-        no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/pdos_a.PNG?raw=true'
-        st.image(no_url, use_column_width=True) 
