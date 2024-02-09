@@ -11,9 +11,6 @@ from streamlit_option_menu import option_menu
 from PIL import Image  
 import matplotlib.pyplot as plt
 
-pip install -r requirements.txt
-conda install openpyxl
-
 #import streamlit as st
 #st.image('sunrise.jpg', caption='Sunrise by the mountains')
 # c:\users\louise\anaconda3\lib\site-packages
