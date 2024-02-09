@@ -262,9 +262,7 @@ if selected == "Data: Pt/Pd bulks":
             no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/tab2_d.PNG?raw=true'
             st.image(no_url, use_column_width=True) 
             
-#gg
-
-    data_fig3_2 = st.radio("Please select POS data to see",("Pt"))
+    data_fig3_2 = st.radio("Please select POS data to see",("Pt","none"))
     
     if data_fig3_2 == "Pt":
         no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/pdos_a.PNG?raw=true'
@@ -274,4 +272,5 @@ if selected == "Data: Pt/Pd bulks":
         if button2_band_pt:
             no_url = 'https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/pdos_a.PNG?raw=true'
             st.image(no_url, use_column_width=True) 
+            
             
