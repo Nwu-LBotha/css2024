@@ -142,10 +142,10 @@ if selected == "Data: Pt/Pd bulks":
     # Load data
     csv_url = "https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/Paper2_bulk_fig1.csv"
     try:
-    # Assuming that the file might have more than one field
+        # Assuming that the file might have more than one field
         fig1_data = pd.read_csv(csv_url, error_bad_lines=False)
+    
         st.write("DataFrame from CSV file:")
         st.write(fig1_data)
     except Exception as e:
         st.error(f"An error occurred: {e}")
-    
