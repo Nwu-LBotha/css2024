@@ -144,11 +144,11 @@ if selected == "Data: Pt/Pd bulks":
     #fig1_data = pd.read_excel(excel_url, sheet_name='figure1', engine='openpyxl')  # Specify the engine for reading .xlsx files
 
     # Define the URL of the Excel file
-    excel_url = "https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/Paper2_bulkdata_fig1.xlsx"
+    csv_url = "https://github.com/Nwu-LBotha/css2024/blob/main/My-streamlit_app/media/Paper2_bulk_fig1.csv"
 
     # Read the Excel file into a DataFrame
     try:
-        fig1_data = pd.read_excel(excel_url, sheet_name='figure1', engine='openpyxl')  # Specify the engine for reading .xlsx files
+        fig1_data = pd.read_csv(excel_url, sheet_name='figure1')  # Specify the engine for reading .xlsx files
         st.write("DataFrame from Excel file:")
         st.write(fig1_data)
     except Exception as e:
